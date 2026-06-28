@@ -1,0 +1,435 @@
+{
+  "dataset_schema_version": 1,
+  "session_id": "session_20260524_204035",
+  "start_time_iso": "2026-05-24T20:40:37.259052",
+  "env_name": "coinrun",
+  "observation_shape": [
+    64,
+    64,
+    3
+  ],
+  "action_space": {
+    "type": "Discrete",
+    "n": 15,
+    "combos": [
+      [
+        "LEFT",
+        "DOWN"
+      ],
+      [
+        "LEFT"
+      ],
+      [
+        "LEFT",
+        "UP"
+      ],
+      [
+        "DOWN"
+      ],
+      [],
+      [
+        "UP"
+      ],
+      [
+        "RIGHT",
+        "DOWN"
+      ],
+      [
+        "RIGHT"
+      ],
+      [
+        "RIGHT",
+        "UP"
+      ],
+      [
+        "D"
+      ],
+      [
+        "A"
+      ],
+      [
+        "W"
+      ],
+      [
+        "S"
+      ],
+      [
+        "Q"
+      ],
+      [
+        "E"
+      ]
+    ]
+  },
+  "env_kwargs": {
+    "env_name": "coinrun",
+    "distribution_mode": "hard",
+    "num_levels": 0,
+    "start_level": 0,
+    "center_agent": true,
+    "use_backgrounds": true,
+    "restrict_themes": false,
+    "use_monochrome_assets": false,
+    "paint_vel_info": false,
+    "use_generated_assets": false
+  },
+  "procgen_version": "0.10.7",
+  "python_version": "3.9.25",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "end_time_iso": "2026-05-24T20:49:38.381685",
+  "episodes": [
+    {
+      "file": "episode_00001.npz",
+      "length": 64,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 1851562978
+    },
+    {
+      "file": "episode_00002.npz",
+      "length": 27,
+      "total_reward": 0.0,
+      "completed": false,
+      "truncated": false,
+      "level_seed": 125240673
+    },
+    {
+      "file": "episode_00003.npz",
+      "length": 26,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 436954391
+    },
+    {
+      "file": "episode_00004.npz",
+      "length": 89,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 1889235004
+    },
+    {
+      "file": "episode_00005.npz",
+      "length": 118,
+      "total_reward": 0.0,
+      "completed": false,
+      "truncated": false,
+      "level_seed": 1638630148
+    },
+    {
+      "file": "episode_00006.npz",
+      "length": 36,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 338689694
+    },
+    {
+      "file": "episode_00007.npz",
+      "length": 75,
+      "total_reward": 0.0,
+      "completed": false,
+      "truncated": false,
+      "level_seed": 1793301
+    },
+    {
+      "file": "episode_00008.npz",
+      "length": 43,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 665244175
+    },
+    {
+      "file": "episode_00009.npz",
+      "length": 50,
+      "total_reward": 0.0,
+      "completed": false,
+      "truncated": false,
+      "level_seed": 459402993
+    },
+    {
+      "file": "episode_00010.npz",
+      "length": 89,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 476924325
+    },
+    {
+      "file": "episode_00011.npz",
+      "length": 45,
+      "total_reward": 0.0,
+      "completed": false,
+      "truncated": false,
+      "level_seed": 973950185
+    },
+    {
+      "file": "episode_00012.npz",
+      "length": 27,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 581992935
+    },
+    {
+      "file": "episode_00013.npz",
+      "length": 132,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 586112916
+    },
+    {
+      "file": "episode_00014.npz",
+      "length": 250,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 1557977186
+    },
+    {
+      "file": "episode_00015.npz",
+      "length": 43,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 2059593563
+    },
+    {
+      "file": "episode_00016.npz",
+      "length": 751,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 951922033
+    },
+    {
+      "file": "episode_00017.npz",
+      "length": 99,
+      "total_reward": 0.0,
+      "completed": false,
+      "truncated": false,
+      "level_seed": 62197762
+    },
+    {
+      "file": "episode_00018.npz",
+      "length": 106,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 2045193621
+    },
+    {
+      "file": "episode_00019.npz",
+      "length": 820,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 331495480
+    },
+    {
+      "file": "episode_00020.npz",
+      "length": 138,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 258830065
+    },
+    {
+      "file": "episode_00021.npz",
+      "length": 83,
+      "total_reward": 0.0,
+      "completed": false,
+      "truncated": false,
+      "level_seed": 387365189
+    },
+    {
+      "file": "episode_00022.npz",
+      "length": 76,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 1865672746
+    },
+    {
+      "file": "episode_00023.npz",
+      "length": 26,
+      "total_reward": 0.0,
+      "completed": false,
+      "truncated": false,
+      "level_seed": 1103710688
+    },
+    {
+      "file": "episode_00024.npz",
+      "length": 23,
+      "total_reward": 0.0,
+      "completed": false,
+      "truncated": false,
+      "level_seed": 1416067140
+    },
+    {
+      "file": "episode_00025.npz",
+      "length": 193,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 544007227
+    },
+    {
+      "file": "episode_00026.npz",
+      "length": 39,
+      "total_reward": 0.0,
+      "completed": false,
+      "truncated": false,
+      "level_seed": 1247446286
+    },
+    {
+      "file": "episode_00027.npz",
+      "length": 74,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 2058542255
+    },
+    {
+      "file": "episode_00028.npz",
+      "length": 28,
+      "total_reward": 0.0,
+      "completed": false,
+      "truncated": false,
+      "level_seed": 2068074769
+    },
+    {
+      "file": "episode_00029.npz",
+      "length": 109,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 1702371971
+    },
+    {
+      "file": "episode_00030.npz",
+      "length": 83,
+      "total_reward": 0.0,
+      "completed": false,
+      "truncated": false,
+      "level_seed": 2071503766
+    },
+    {
+      "file": "episode_00031.npz",
+      "length": 313,
+      "total_reward": 0.0,
+      "completed": false,
+      "truncated": false,
+      "level_seed": 197275355
+    },
+    {
+      "file": "episode_00032.npz",
+      "length": 100,
+      "total_reward": 0.0,
+      "completed": false,
+      "truncated": false,
+      "level_seed": 1049985406
+    },
+    {
+      "file": "episode_00033.npz",
+      "length": 56,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 182565020
+    },
+    {
+      "file": "episode_00034.npz",
+      "length": 23,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 753857506
+    },
+    {
+      "file": "episode_00035.npz",
+      "length": 123,
+      "total_reward": 0.0,
+      "completed": false,
+      "truncated": false,
+      "level_seed": 191805064
+    },
+    {
+      "file": "episode_00036.npz",
+      "length": 59,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 1533039174
+    },
+    {
+      "file": "episode_00037.npz",
+      "length": 67,
+      "total_reward": 0.0,
+      "completed": false,
+      "truncated": false,
+      "level_seed": 1674328688
+    },
+    {
+      "file": "episode_00038.npz",
+      "length": 44,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 2118666808
+    },
+    {
+      "file": "episode_00039.npz",
+      "length": 28,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 984509933
+    },
+    {
+      "file": "episode_00040.npz",
+      "length": 76,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 1725315715
+    },
+    {
+      "file": "episode_00041.npz",
+      "length": 38,
+      "total_reward": 0.0,
+      "completed": false,
+      "truncated": false,
+      "level_seed": 350287
+    },
+    {
+      "file": "episode_00042.npz",
+      "length": 587,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 1673626713
+    },
+    {
+      "file": "episode_00043.npz",
+      "length": 875,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 1647516546
+    }
+  ],
+  "summary": {
+    "episodes": 43,
+    "total_steps": 6151,
+    "wins": 26,
+    "win_rate": 0.6046511627906976,
+    "avg_episode_length": 143.04651162790697,
+    "avg_episode_reward": 6.046511627906977,
+    "elapsed_seconds": 541.1226332187653
+  }
+}
