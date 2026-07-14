@@ -1,0 +1,15 @@
+{
+  "amp_used": false,
+  "best_val_loss": 0.0222928723692894,
+  "checkpoint": "experiments/EXP-003-autoencoder/checkpoints/best.pt",
+  "coin_weighted_trial_reason": "worse exact coin-pixel MAE and zero yellow recall",
+  "coin_weighted_trial_selected": false,
+  "device": "cpu",
+  "diagnostic_split_acknowledged": true,
+  "epochs_completed": 12,
+  "global_steps": 936,
+  "gpu_used": false,
+  "selected_trial": "unweighted_l1_ssim",
+  "train_frames": 2485,
+  "val_frames": 600
+}

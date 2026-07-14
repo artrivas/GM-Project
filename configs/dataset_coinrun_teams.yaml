@@ -1,0 +1,30 @@
+schema_version: 1
+dataset_name: coinrun_teams_v1
+
+source:
+  original_root: data/incoming/coinrun_teams_v1/original
+  inventory_manifest: data/incoming/coinrun_teams_v1/index/manifest.jsonl
+  source_policy: unknown_external
+
+active:
+  train_dir: data/datasets/coinrun_teams_v1/splits/train
+  val_dir: data/datasets/coinrun_teams_v1/splits/val
+  test_dir: data/datasets/coinrun_teams_v1/splits/test
+
+smoke:
+  train_dir: data/datasets/coinrun_teams_v1/smoke/train
+  val_dir: data/datasets/coinrun_teams_v1/smoke/val
+  test_dir: data/datasets/coinrun_teams_v1/smoke/test
+  maximum_frames: 256
+  maximum_steps: 20
+
+split:
+  strategy: hold_out_entire_teams
+  train_teams: [Team1, Team2, Team3, Team4]
+  val_teams: [Team5]
+  test_teams: [Team6]
+
+readiness:
+  autoencoder: true
+  rssm: false
+  rssm_blocker: action_frame_alignment_not_yet_audited

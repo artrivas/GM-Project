@@ -1,0 +1,22 @@
+{
+  "device": "cpu",
+  "input_shape": [
+    2,
+    3,
+    64,
+    64
+  ],
+  "latent_shape": [
+    2,
+    64
+  ],
+  "output_max": 0.9258804321289062,
+  "output_min": 0.19620347023010254,
+  "output_shape": [
+    2,
+    3,
+    64,
+    64
+  ],
+  "parameters": 805251
+}

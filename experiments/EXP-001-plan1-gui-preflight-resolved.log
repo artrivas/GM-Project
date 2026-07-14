@@ -1,0 +1,12 @@
+﻿wsl.exe : Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+At line:2 char:331
++ ... STEXITCODE; & wsl -d Ubuntu -- env LD_LIBRARY_PATH=/home/artrivas/GM- ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Gym has been un... functionality.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and 
+request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast 
+majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.

@@ -1,0 +1,17 @@
+{"elapsed_seconds": 15.06303287800256, "epoch": 8, "global_step": 702, "train": {"l1": 0.01837749094355634, "loss": 0.02541749394335737, "ssim": 0.8928449928640599}, "val": {"l1": 0.017620388120412826, "loss": 0.024692486599087717, "ssim": 0.8940382424990336}}
+{"elapsed_seconds": 31.255155769002158, "epoch": 9, "global_step": 780, "train": {"l1": 0.017225888546113996, "loss": 0.023863402389784454, "ssim": 0.8991730888844496}, "val": {"l1": 0.017265319575866064, "loss": 0.024101795703172682, "ssim": 0.8971046042442322}}
+{"elapsed_seconds": 47.19761567500245, "epoch": 10, "global_step": 858, "train": {"l1": 0.016641094022143775, "loss": 0.02299105022664761, "ssim": 0.9032182536854351}, "val": {"l1": 0.016736355175574622, "loss": 0.023384154960513114, "ssim": 0.9000492930412293}}
+{"elapsed_seconds": 64.02762068700395, "epoch": 11, "global_step": 936, "train": {"l1": 0.01624091428028086, "loss": 0.02254386807471454, "ssim": 0.9044886370779763}, "val": {"l1": 0.01591297470033169, "loss": 0.0222928723692894, "ssim": 0.9043750770886739}}
+{
+  "amp_used": false,
+  "best_val_loss": 0.0222928723692894,
+  "checkpoint": "experiments/EXP-003-autoencoder/checkpoints/best.pt",
+  "device": "cpu",
+  "diagnostic_split_acknowledged": true,
+  "elapsed_seconds": 64.21277867100434,
+  "epochs_completed": 12,
+  "global_steps": 936,
+  "gpu_used": false,
+  "train_frames": 2485,
+  "val_frames": 600
+}

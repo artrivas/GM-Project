@@ -1,0 +1,2 @@
+﻿episodios=20 frames=3685 muertes_proxy=5 victorias=5 truncados=10 metadata=100.0%
+{"by_mode": {"easy": 5, "hard": 15}, "by_policy": {"random": 5, "scripted": 10, "sticky": 5}, "deaths": 5, "episodes": 20, "frames": 3685, "metadata_complete": 20, "metadata_percent": 100.0, "truncated": 10, "wins": 5}

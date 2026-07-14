@@ -1,0 +1,28 @@
+{
+  "automatic": {
+    "episodes": 20,
+    "transitions": 3685,
+    "wins": 5,
+    "terminal_failures_death_proxy": 5,
+    "truncated": 10,
+    "metadata_complete_percent": 100.0,
+    "replay_verified_episodes": 20,
+    "replay_verified_transitions": 3685
+  },
+  "by_run": {
+    "random_hard": {"episodes": 5, "transitions": 1500, "wins": 0, "terminal_failures": 0, "truncated": 5},
+    "sticky_0_7_hard": {"episodes": 5, "transitions": 1500, "wins": 0, "terminal_failures": 0, "truncated": 5},
+    "scripted_hard": {"episodes": 5, "transitions": 395, "wins": 5, "terminal_failures": 0, "truncated": 0},
+    "scripted_easy": {"episodes": 5, "transitions": 290, "wins": 0, "terminal_failures": 5, "truncated": 0}
+  },
+  "human": {
+    "valid_episodes": 0,
+    "valid_non_noop_actions": 0,
+    "quarantined_gui_smoke_episodes": 2,
+    "quarantined_gui_smoke_transitions": 1755
+  },
+  "tests": {
+    "plan1_passed": 16,
+    "full_suite_passed": 22
+  }
+}

@@ -1,0 +1,20 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.18, pytest-8.3.5, pluggy-1.6.0 -- /home/artrivas/GM-Project/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/artrivas/GM-Project
+configfile: pytest.ini
+collecting ... collected 11 items
+
+tests/test_autoencoder.py::test_shape_latent_and_output_range PASSED     [  9%]
+tests/test_autoencoder.py::test_loss_is_zero_for_identical_images_and_ssim_is_one PASSED [ 18%]
+tests/test_autoencoder.py::test_ssim_decreases_for_a_perturbed_image PASSED [ 27%]
+tests/test_autoencoder.py::test_backward_gradients_are_finite PASSED     [ 36%]
+tests/test_autoencoder.py::test_real_manifest_loader_normalizes_without_losing_frames PASSED [ 45%]
+tests/test_autoencoder.py::test_coin_mask_finds_a_two_by_two_yellow_object PASSED [ 54%]
+tests/test_autoencoder.py::test_coin_weighting_penalizes_a_missing_coin_more_than_plain_l1 PASSED [ 63%]
+tests/test_autoencoder.py::test_checkpoint_round_trip_preserves_output PASSED [ 72%]
+tests/test_autoencoder.py::test_same_seed_produces_same_initial_model PASSED [ 81%]
+tests/test_autoencoder.py::test_overfit_one_small_batch_reduces_loss PASSED [ 90%]
+tests/test_autoencoder.py::test_model_code_does_not_import_or_advance_procgen PASSED [100%]
+
+============================== 11 passed in 3.66s ==============================

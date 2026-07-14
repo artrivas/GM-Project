@@ -1,0 +1,51 @@
+{
+  "content_fingerprint_overlap": {
+    "train-test": [],
+    "train-val": [],
+    "val-test": []
+  },
+  "counts_reopened_from_hdf5": {
+    "test": {
+      "deaths": 0,
+      "episodes": 2,
+      "frames": 600,
+      "truncated": 2,
+      "unique_content_trajectories": 2,
+      "unique_deaths": 0,
+      "unique_truncated": 2,
+      "unique_victories": 0,
+      "victories": 0
+    },
+    "train": {
+      "deaths": 5,
+      "episodes": 16,
+      "frames": 2485,
+      "truncated": 6,
+      "unique_content_trajectories": 8,
+      "unique_deaths": 1,
+      "unique_truncated": 6,
+      "unique_victories": 1,
+      "victories": 5
+    },
+    "val": {
+      "deaths": 0,
+      "episodes": 2,
+      "frames": 600,
+      "truncated": 2,
+      "unique_content_trajectories": 2,
+      "unique_deaths": 0,
+      "unique_truncated": 2,
+      "unique_victories": 0,
+      "victories": 0
+    }
+  },
+  "episode_id_overlap": {
+    "train-test": [],
+    "train-val": [],
+    "val-test": []
+  },
+  "errors": [],
+  "no_leakage": true,
+  "splits_dir": "data/splits",
+  "unique_content_trajectories_global": 12
+}

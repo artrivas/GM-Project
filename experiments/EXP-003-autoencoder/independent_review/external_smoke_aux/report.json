@@ -1,0 +1,39 @@
+{
+  "automatic_flags": {
+    "insufficient_coin_frames": false,
+    "systematic_coin_color_loss": true
+  },
+  "checkpoint": "experiments/EXP-003-autoencoder/external-dataset-smoke/checkpoints/best.pt",
+  "checkpoint_global_step": 20,
+  "coin_sample_requirement_met": true,
+  "device": "cpu",
+  "eval_manifest": "data/datasets/coinrun_teams_v1/smoke/val/manifest.jsonl",
+  "independent_metrics": {
+    "coin_visible_frames": 43,
+    "frames": 361,
+    "mae": 0.13326055653537738,
+    "mean_coin_color_recall": 0.0,
+    "mean_coin_pixel_mae": 0.3299816683974377,
+    "mean_coin_roi_mae": 0.33240494374618973,
+    "mse": 0.03839080947918245,
+    "psnr_db": 14.157727305854904,
+    "ssim": 0.4536061709607407
+  },
+  "reported_comparison": {
+    "available": true,
+    "differences": {
+      "mean_coin_color_recall": 0.0,
+      "mean_coin_roi_mae": 0.0,
+      "psnr_db": 0.0,
+      "ssim": 0.0
+    },
+    "metrics_path": "experiments/EXP-003-autoencoder/external-dataset-smoke/metrics.json",
+    "reproduced_within_1e_6": true
+  },
+  "requested_coin_samples": 10,
+  "selected_coin_samples": 10,
+  "visual_evidence": {
+    "coin_samples": "experiments/EXP-003-autoencoder/independent_review/external_smoke_aux/coin_samples.png",
+    "context_samples": "experiments/EXP-003-autoencoder/independent_review/external_smoke_aux/context_samples.png"
+  }
+}

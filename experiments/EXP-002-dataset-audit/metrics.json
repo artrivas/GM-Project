@@ -1,0 +1,16 @@
+{
+  "scanned_episode_files": 23,
+  "eligible_episodes": 20,
+  "excluded_episodes": 3,
+  "broken_episodes": 0,
+  "frames": 3685,
+  "action_coverage": 15,
+  "unique_content_trajectories": 12,
+  "physical_victories": 5,
+  "unique_victories": 1,
+  "physical_terminal_failures": 5,
+  "unique_terminal_failures": 1,
+  "human_episodes": 0,
+  "split_accepted_for_training": false,
+  "decision": "NO-GO_DIAGNOSTIC_SPLIT_ONLY"
+}

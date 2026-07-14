@@ -1,0 +1,13 @@
+schema_version: 1
+source_config: configs/data_collection.yaml
+level_seed: 0
+max_steps_per_episode: 300
+policy_rng_seed: 20260713
+sticky_probability: 0.7
+runs:
+  - {policy: random, distribution_mode: hard, episodes: 5}
+  - {policy: sticky, distribution_mode: hard, episodes: 5}
+  - {policy: scripted, distribution_mode: hard, episodes: 5}
+  - {policy: scripted, distribution_mode: easy, episodes: 5}
+human_pilot_minutes: 2
+human_minimum_non_noop_actions: 1

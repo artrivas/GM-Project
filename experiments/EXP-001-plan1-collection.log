@@ -1,0 +1,24 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.18, pytest-8.3.5, pluggy-1.6.0 -- /home/artrivas/GM-Project/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/artrivas/GM-Project
+collecting ... collected 16 items
+
+tests/test_data_collection.py::test_each_policy_only_emits_valid_actions[policy0] PASSED [  6%]
+tests/test_data_collection.py::test_each_policy_only_emits_valid_actions[policy1] PASSED [ 12%]
+tests/test_data_collection.py::test_each_policy_only_emits_valid_actions[policy2] PASSED [ 18%]
+tests/test_data_collection.py::test_policy_action_sequence_is_deterministic[<lambda>0] PASSED [ 25%]
+tests/test_data_collection.py::test_policy_action_sequence_is_deterministic[<lambda>1] PASSED [ 31%]
+tests/test_data_collection.py::test_policy_action_sequence_is_deterministic[<lambda>2] PASSED [ 37%]
+tests/test_data_collection.py::test_sticky_probability_validation PASSED [ 43%]
+tests/test_data_collection.py::test_episode_round_trip_and_transition_alignment PASSED [ 50%]
+tests/test_data_collection.py::test_truncated_episode_metadata PASSED    [ 56%]
+tests/test_data_collection.py::test_source_policy_can_be_relabelled_before_publication PASSED [ 62%]
+tests/test_data_collection.py::test_missing_metadata_is_rejected PASSED  [ 68%]
+tests/test_data_collection.py::test_world_model_rollout_cannot_advance_procgen PASSED [ 75%]
+tests/test_data_collection.py::test_simulator_transition_is_centralized PASSED [ 81%]
+tests/test_data_collection.py::test_real_procgen_collection_round_trip_and_replay PASSED [ 87%]
+tests/test_data_collection.py::test_same_seeds_produce_same_actions_and_frames PASSED [ 93%]
+tests/test_data_collection.py::test_quick_report_counts_complete_metadata PASSED [100%]
+
+============================== 16 passed in 1.81s ==============================

@@ -1,0 +1,12 @@
+{
+  "duplicate_content_groups": 0,
+  "frames": 163746,
+  "physical_npz_files": 1899,
+  "pixel_max": 255,
+  "pixel_min": 0,
+  "quarantine_records": 5,
+  "sessions": 21,
+  "teams": 6,
+  "unique_level_seeds": 1899,
+  "valid_episodes": 1899
+}

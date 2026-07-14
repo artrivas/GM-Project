@@ -1,0 +1,39 @@
+{
+  "automatic_flags": {
+    "insufficient_coin_frames": true,
+    "systematic_coin_color_loss": true
+  },
+  "checkpoint": "experiments/EXP-003-autoencoder/checkpoints/best.pt",
+  "checkpoint_global_step": 936,
+  "coin_sample_requirement_met": false,
+  "device": "cpu",
+  "eval_manifest": "data/splits/val/manifest.jsonl",
+  "independent_metrics": {
+    "coin_visible_frames": 1,
+    "frames": 600,
+    "mae": 0.015912974725166958,
+    "mean_coin_color_recall": 0.0,
+    "mean_coin_pixel_mae": 0.4335663914680481,
+    "mean_coin_roi_mae": 0.1531861573457718,
+    "mse": 0.0017568575901289781,
+    "psnr_db": 27.552634407401975,
+    "ssim": 0.9043750762939453
+  },
+  "reported_comparison": {
+    "available": true,
+    "differences": {
+      "mean_coin_color_recall": 0.0,
+      "mean_coin_roi_mae": 0.0,
+      "psnr_db": 0.0,
+      "ssim": 0.0
+    },
+    "metrics_path": "experiments/EXP-003-autoencoder/metrics.json",
+    "reproduced_within_1e_6": true
+  },
+  "requested_coin_samples": 10,
+  "selected_coin_samples": 1,
+  "visual_evidence": {
+    "coin_samples": "experiments/EXP-003-autoencoder/independent_review/legacy_requested/coin_samples.png",
+    "context_samples": "experiments/EXP-003-autoencoder/independent_review/legacy_requested/context_samples.png"
+  }
+}

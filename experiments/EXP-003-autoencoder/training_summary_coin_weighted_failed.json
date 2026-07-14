@@ -1,0 +1,13 @@
+{
+  "amp_used": false,
+  "best_val_loss": 0.02003777119020621,
+  "checkpoint": "experiments/EXP-003-autoencoder/checkpoints/best.pt",
+  "device": "cpu",
+  "diagnostic_split_acknowledged": true,
+  "elapsed_seconds": 84.99211205000029,
+  "epochs_completed": 17,
+  "global_steps": 1326,
+  "gpu_used": false,
+  "train_frames": 2485,
+  "val_frames": 600
+}

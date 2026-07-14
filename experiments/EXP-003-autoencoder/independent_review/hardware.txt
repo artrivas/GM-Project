@@ -1,0 +1,6 @@
+GPU: opcional para esta auditoría; no disponible en esta ejecución
+nvidia-smi: comando no instalado
+PyTorch: 2.2.2+cpu
+torch.cuda.is_available(): False
+torch.version.cuda: None
+Dispositivo usado: CPU

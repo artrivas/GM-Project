@@ -1,7 +1,9 @@
 --extra-index-url https://download.pytorch.org/whl/cpu
 
 numpy==1.26.4
+h5py==3.11.0
 procgen==0.10.7
+Pillow==12.2.0
 PyYAML==6.0.2
 pytest==8.3.5
 torch==2.2.2+cpu

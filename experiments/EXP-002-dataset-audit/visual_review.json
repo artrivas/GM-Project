@@ -1,0 +1,21 @@
+{
+  "artifact": "samples/random_episode_sample.png",
+  "review_status": "passed_for_sampled_frames",
+  "selection_seed": 20260714,
+  "episodes_reviewed": [
+    {
+      "path": "data/raw/pilot_random/episode_002.h5",
+      "frame_indices": [25, 95, 146, 185]
+    },
+    {
+      "path": "data/raw/pilot_sticky/episode_004.h5",
+      "frame_indices": [18, 26, 77, 239]
+    }
+  ],
+  "observations": [
+    "CoinRun frames are visually decodable at 64x64 RGB.",
+    "The player and level geometry remain visible across each sampled sequence.",
+    "No blank frames, obvious corruption, or cross-episode reset frame was observed."
+  ],
+  "scope_limit": "This manual review covers only the sampled frames; structural checks cover all eligible episodes."
+}

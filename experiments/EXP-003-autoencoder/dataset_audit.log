@@ -1,0 +1,12 @@
+{
+  "dtype_after_normalization": "torch.float32",
+  "maximum": 255.0,
+  "minimum": 0.0,
+  "shape": [
+    3,
+    64,
+    64
+  ],
+  "train_frames": 2485,
+  "val_frames": 600
+}

@@ -1,0 +1,45 @@
+schema_version: 1
+
+environment:
+  env_name: coinrun
+  action_count: 15
+  observation_shape: [64, 64, 3]
+  distribution_mode: hard
+  use_sequential_levels: false
+  num_threads: 0
+
+seeds:
+  primary: 0
+  candidates: [1, 2, 3, 4]
+  status: pending_human_playability_confirmation
+
+storage:
+  format: hdf5_per_episode
+  compression: lzf
+  root: data/raw
+  schema_version: "1.0"
+
+pilot:
+  episodes_per_policy: 5
+  max_steps_per_episode: 300
+  policy_rng_seed: 20260713
+  compare_distribution_modes: [hard, easy]
+
+human:
+  pilot_minutes: 2
+  target_minutes: 40
+  frames_per_second: 15
+  output: data/raw/pilot_human
+
+policies:
+  enabled: [human, random, sticky, scripted]
+  trained_enabled: false
+  sticky_probabilities_to_validate: [0.5, 0.7, 0.9]
+  sticky_default_for_pilot: 0.7
+  initial_mixture_is_assumption: true
+
+event_semantics:
+  win: done_and_prev_level_complete
+  terminal_failure: done_and_not_prev_level_complete
+  death_field: non_win_terminal_proxy
+  fall_separately_observable: false

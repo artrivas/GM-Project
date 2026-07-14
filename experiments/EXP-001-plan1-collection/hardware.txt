@@ -1,0 +1,6 @@
+OS: Ubuntu 26.04 LTS under WSL2 on Windows 11 Home
+CPU: AMD Ryzen 7 PRO 7840U, 8 cores / 16 logical processors
+WSL RAM: 7.1 GiB total at audit
+GPU: no NVIDIA/CUDA device; torch 2.2.2+cpu
+Plan 1 GPU classification: not required
+Dataset storage used by all Plan 1 raw files: approximately 33 MiB

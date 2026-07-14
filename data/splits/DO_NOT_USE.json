@@ -1,0 +1,9 @@
+{
+  "accepted_for_training": false,
+  "reason": "strict quality gates failed; see summary.json",
+  "violations": [
+    "val_missing_unique_victory_or_terminal_failure",
+    "test_missing_unique_victory_or_terminal_failure",
+    "upstream_plan1_has_no_valid_human_episode"
+  ]
+}

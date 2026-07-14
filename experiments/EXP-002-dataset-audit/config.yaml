@@ -1,0 +1,30 @@
+schema_version: 1
+
+input:
+  patterns: ["data/raw/*/episode_*.h5"]
+  exclude_source_policies: [gui_smoke_idle]
+  exclude_smoke_collections: true
+  require_valid_human_input: true
+
+audit:
+  visual_sample_episodes: 2
+  visual_sample_seed: 20260714
+  content_fingerprint_datasets:
+    - observations
+    - next_observations
+    - next_observation_valid
+    - actions
+    - rewards
+    - dones
+    - truncateds
+    - events
+
+split:
+  strategy: by_episode_within_seed_grouped
+  ratios: [0.70, 0.15, 0.15]
+  assignment_seed: 20260714
+  group_by: content_fingerprint
+  minimum_unique_victories_per_split: 1
+  minimum_unique_terminal_failures_per_split: 1
+  strict_rare_events: true
+  diagnostic_output_on_failure: true

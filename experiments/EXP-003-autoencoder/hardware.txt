@@ -1,0 +1,6 @@
+sin GPU
+torch=2.2.2+cpu
+cuda_available=False
+device=cpu
+gpu_used=False
+amp_used=False

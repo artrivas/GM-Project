@@ -1,0 +1,1 @@
+{"baseline_coin_pixel_mae": 0.36775609850883484, "baseline_roi_mae": 0.3775540292263031, "bbox_xyxy": [59, 39, 64, 46], "coin_color_recall": 0.0, "coin_pixels": 5, "episode_id": "pilot_sticky-sticky-s0-001", "frame_index": 299, "model_coin_pixel_mae": 0.4335663914680481, "model_roi_mae": 0.1531861573457718}

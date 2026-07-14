@@ -1,0 +1,18 @@
+{
+  "dtype_after_normalization": "torch.float32",
+  "lazy_loading": false,
+  "sampled_pixel_maximum": 255,
+  "sampled_pixel_minimum": 0,
+  "shape": [
+    3,
+    64,
+    64
+  ],
+  "storage_formats": [
+    "npz_external_v1"
+  ],
+  "train_episodes": 8,
+  "train_frames": 179,
+  "val_episodes": 8,
+  "val_frames": 361
+}

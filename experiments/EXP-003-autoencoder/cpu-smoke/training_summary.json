@@ -1,0 +1,13 @@
+{
+  "amp_used": false,
+  "best_val_loss": 0.07732719292243322,
+  "checkpoint": "experiments/EXP-003-autoencoder/cpu-smoke/checkpoints/best.pt",
+  "device": "cpu",
+  "diagnostic_split_acknowledged": true,
+  "elapsed_seconds": 19.771117570999195,
+  "epochs_completed": 7,
+  "global_steps": 50,
+  "gpu_used": false,
+  "train_frames": 2485,
+  "val_frames": 600
+}

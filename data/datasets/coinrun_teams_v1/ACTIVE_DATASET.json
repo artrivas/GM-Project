@@ -1,0 +1,8 @@
+{
+  "active_for_autoencoder": true,
+  "active_splits": "splits/",
+  "dataset": "coinrun_teams_v1",
+  "dynamics_ready": false,
+  "legacy_splits_untouched": "data/splits/",
+  "smoke_splits": "smoke/"
+}

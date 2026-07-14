@@ -1,0 +1,56 @@
+{
+  "acceptance": {
+    "coin_color_recall_at_least_90_percent": false,
+    "coin_evidence_has_at_least_10_frames": false,
+    "coin_roi_mae_improves_by_25_percent": true,
+    "psnr_beats_baseline_by_3db": true,
+    "ssim_beats_baseline_by_0_10": true
+  },
+  "checkpoint": "experiments/EXP-003-autoencoder/checkpoints/best.pt",
+  "coin": {
+    "frames": 1,
+    "mean_baseline_coin_pixel_mae": 0.36775609850883484,
+    "mean_baseline_roi_mae": 0.3775540292263031,
+    "mean_coin_color_recall": 0.0,
+    "mean_model_coin_pixel_mae": 0.4335663914680481,
+    "mean_model_roi_mae": 0.1531861573457718,
+    "roi_mae_improvement_fraction": 0.5942669247638909,
+    "rows": [
+      {
+        "baseline_coin_pixel_mae": 0.36775609850883484,
+        "baseline_roi_mae": 0.3775540292263031,
+        "bbox_xyxy": [
+          59,
+          39,
+          64,
+          46
+        ],
+        "coin_color_recall": 0.0,
+        "coin_pixels": 5,
+        "episode_id": "pilot_sticky-sticky-s0-001",
+        "frame_index": 299,
+        "model_coin_pixel_mae": 0.4335663914680481,
+        "model_roi_mae": 0.1531861573457718
+      }
+    ]
+  },
+  "device": "cpu",
+  "eval_manifest": "data/splits/val/manifest.jsonl",
+  "frames": 600,
+  "global": {
+    "baseline_mae": 0.16580427169799805,
+    "baseline_mse": 0.04621302525202433,
+    "baseline_psnr_db": 13.352356002487657,
+    "baseline_ssim": 0.45056546211242676,
+    "model_mae": 0.015912974725166958,
+    "model_mse": 0.0017568575901289781,
+    "model_psnr_db": 27.552634407401975,
+    "model_ssim": 0.9043750762939453
+  },
+  "go": false,
+  "limitations": [
+    "Coin regions are detected from ground-truth yellow pixels for this fixed CoinRun seed.",
+    "Validation contains too few coin-visible frames for robust model selection.",
+    "The dataset contains only level seed 0."
+  ]
+}

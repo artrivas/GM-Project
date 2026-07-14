@@ -1,0 +1,152 @@
+{
+  "active_for": [
+    "autoencoder",
+    "visual_reconstruction"
+  ],
+  "checks": {
+    "episode_conservation": true,
+    "frame_conservation": true,
+    "no_seed_leakage": true,
+    "no_team_leakage": true,
+    "seed_overlap": {
+      "train-test": [],
+      "train-val": [],
+      "val-test": []
+    },
+    "team_overlap": {
+      "train-test": [],
+      "train-val": [],
+      "val-test": []
+    }
+  },
+  "dataset_name": "coinrun_teams_v1",
+  "limitations": [
+    "Team identifiers are treated as provenance groups, not automatically as human labels.",
+    "Action/frame temporal alignment must be audited before RSSM training.",
+    "Smoke manifests are diagnostic samples and must never replace full evaluation manifests."
+  ],
+  "not_yet_active_for": [
+    "rssm",
+    "action_conditioned_dynamics"
+  ],
+  "schema_version": 1,
+  "smoke": {
+    "test": {
+      "by_mode": {
+        "easy": 5,
+        "hard": 3
+      },
+      "by_outcome": {
+        "non_win_terminal": 4,
+        "truncated": 1,
+        "victory": 3
+      },
+      "episodes": 8,
+      "frames": 182,
+      "sessions": 4,
+      "teams": [
+        "Team6"
+      ],
+      "unique_seeds": 8
+    },
+    "train": {
+      "by_mode": {
+        "easy": 3,
+        "hard": 5
+      },
+      "by_outcome": {
+        "non_win_terminal": 3,
+        "truncated": 1,
+        "victory": 4
+      },
+      "episodes": 8,
+      "frames": 179,
+      "sessions": 8,
+      "teams": [
+        "Team1",
+        "Team2",
+        "Team3",
+        "Team4"
+      ],
+      "unique_seeds": 8
+    },
+    "val": {
+      "by_mode": {
+        "easy": 5,
+        "hard": 3
+      },
+      "by_outcome": {
+        "non_win_terminal": 5,
+        "truncated": 1,
+        "victory": 2
+      },
+      "episodes": 8,
+      "frames": 361,
+      "sessions": 4,
+      "teams": [
+        "Team5"
+      ],
+      "unique_seeds": 8
+    }
+  },
+  "split_strategy": "hold_out_entire_teams",
+  "splits": {
+    "test": {
+      "by_mode": {
+        "easy": 151,
+        "hard": 190
+      },
+      "by_outcome": {
+        "non_win_terminal": 86,
+        "truncated": 3,
+        "victory": 252
+      },
+      "episodes": 341,
+      "frames": 25714,
+      "sessions": 4,
+      "teams": [
+        "Team6"
+      ],
+      "unique_seeds": 341
+    },
+    "train": {
+      "by_mode": {
+        "easy": 548,
+        "hard": 729
+      },
+      "by_outcome": {
+        "non_win_terminal": 288,
+        "truncated": 6,
+        "victory": 983
+      },
+      "episodes": 1277,
+      "frames": 107353,
+      "sessions": 13,
+      "teams": [
+        "Team1",
+        "Team2",
+        "Team3",
+        "Team4"
+      ],
+      "unique_seeds": 1277
+    },
+    "val": {
+      "by_mode": {
+        "easy": 160,
+        "hard": 121
+      },
+      "by_outcome": {
+        "non_win_terminal": 94,
+        "truncated": 1,
+        "victory": 186
+      },
+      "episodes": 281,
+      "frames": 30679,
+      "sessions": 4,
+      "teams": [
+        "Team5"
+      ],
+      "unique_seeds": 281
+    }
+  }
+}

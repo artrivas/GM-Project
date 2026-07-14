@@ -1,0 +1,40 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.18, pytest-8.3.5, pluggy-1.6.0 -- /home/artrivas/GM-Project/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/artrivas/GM-Project
+configfile: pytest.ini
+collecting ... collected 31 items
+
+tests/test_data_collection.py::test_each_policy_only_emits_valid_actions[policy0] PASSED [  3%]
+tests/test_data_collection.py::test_each_policy_only_emits_valid_actions[policy1] PASSED [  6%]
+tests/test_data_collection.py::test_each_policy_only_emits_valid_actions[policy2] PASSED [  9%]
+tests/test_data_collection.py::test_policy_action_sequence_is_deterministic[<lambda>0] PASSED [ 12%]
+tests/test_data_collection.py::test_policy_action_sequence_is_deterministic[<lambda>1] PASSED [ 16%]
+tests/test_data_collection.py::test_policy_action_sequence_is_deterministic[<lambda>2] PASSED [ 19%]
+tests/test_data_collection.py::test_sticky_probability_validation PASSED [ 22%]
+tests/test_data_collection.py::test_episode_round_trip_and_transition_alignment PASSED [ 25%]
+tests/test_data_collection.py::test_truncated_episode_metadata PASSED    [ 29%]
+tests/test_data_collection.py::test_source_policy_can_be_relabelled_before_publication PASSED [ 32%]
+tests/test_data_collection.py::test_missing_metadata_is_rejected PASSED  [ 35%]
+tests/test_data_collection.py::test_world_model_rollout_cannot_advance_procgen PASSED [ 38%]
+tests/test_data_collection.py::test_simulator_transition_is_centralized PASSED [ 41%]
+tests/test_data_collection.py::test_real_procgen_collection_round_trip_and_replay PASSED [ 45%]
+tests/test_data_collection.py::test_same_seeds_produce_same_actions_and_frames PASSED [ 48%]
+tests/test_data_collection.py::test_quick_report_counts_complete_metadata PASSED [ 51%]
+tests/test_dataset_prep.py::test_escaped_underscore_in_supplied_command_is_normalized PASSED [ 54%]
+tests/test_dataset_prep.py::test_content_duplicates_receive_the_same_fingerprint PASSED [ 58%]
+tests/test_dataset_prep.py::test_broken_frame_sequence_is_rejected PASSED [ 61%]
+tests/test_dataset_prep.py::test_scan_excludes_smoke_collection PASSED   [ 64%]
+tests/test_dataset_prep.py::test_no_episode_or_duplicate_content_leakage_and_frame_conservation PASSED [ 67%]
+tests/test_dataset_prep.py::test_split_is_deterministic_for_a_seed PASSED [ 70%]
+tests/test_dataset_prep.py::test_unique_rare_events_are_distributed_when_enough_exist PASSED [ 74%]
+tests/test_dataset_prep.py::test_rare_event_gate_fails_for_one_unique_event_of_each_kind PASSED [ 77%]
+tests/test_dataset_prep.py::test_real_split_artifacts_are_conservative_when_present PASSED [ 80%]
+tests/test_environment.py::test_python_version_is_supported_by_procgen_wheels PASSED [ 83%]
+tests/test_environment.py::test_required_imports PASSED                  [ 87%]
+tests/test_environment.py::test_project_config_round_trip PASSED         [ 90%]
+tests/test_environment.py::test_project_config_safety_guards PASSED      [ 93%]
+tests/test_environment.py::test_fixed_seed_initial_frame_is_deterministic PASSED [ 96%]
+tests/test_environment.py::test_procgen_coinrun_single_permitted_transition PASSED [100%]
+
+============================== 31 passed in 3.71s ==============================

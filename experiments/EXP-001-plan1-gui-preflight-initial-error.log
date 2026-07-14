@@ -1,0 +1,55 @@
+﻿wsl.exe : Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+At line:2 char:36
++ ... 'Continue'; & wsl -d Ubuntu -- env -u LD_LIBRARY_PATH /home/artrivas/ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Gym has been un... functionality.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and 
+request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast 
+majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Traceback (most recent call last):
+  File "/home/artrivas/GM-Project/.venv/lib/python3.10/site-packages/_moderngl.py", line 214, in __init__
+    lib = ctypes.CDLL("libEGL.so")
+  File "/home/artrivas/.local/share/uv/python/cpython-3.10.18-linux-x86_64-gnu/lib/python3.10/ctypes/__init__.py", 
+line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libEGL.so: cannot open shared object file: No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/artrivas/.local/share/uv/python/cpython-3.10.18-linux-x86_64-gnu/lib/python3.10/runpy.py", line 196, in 
+_run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/artrivas/.local/share/uv/python/cpython-3.10.18-linux-x86_64-gnu/lib/python3.10/runpy.py", line 86, in 
+_run_code
+    exec(code, run_globals)
+  File "/home/artrivas/GM-Project/.venv/lib/python3.10/site-packages/procgen/interactive.py", line 136, in <module>
+    main()
+  File "/home/artrivas/GM-Project/.venv/lib/python3.10/site-packages/procgen/interactive.py", line 129, in main
+    ia = make_interactive(
+  File "/home/artrivas/GM-Project/.venv/lib/python3.10/site-packages/procgen/interactive.py", line 40, in 
+make_interactive
+    return ProcgenInteractive(
+  File "/home/artrivas/GM-Project/.venv/lib/python3.10/site-packages/procgen/interactive.py", line 11, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/artrivas/GM-Project/.venv/lib/python3.10/site-packages/gym3/interactive.py", line 63, in __init__
+    self._renderer = Renderer(width=width, height=height)
+  File "/home/artrivas/GM-Project/.venv/lib/python3.10/site-packages/gym3/internal/renderer.py", line 148, in __init__
+    self._ctx = self._mgl.create_context()
+  File "/home/artrivas/GM-Project/.venv/lib/python3.10/site-packages/moderngl/__init__.py", line 2242, in 
+create_context
+    ctx = get_context()
+  File "/home/artrivas/GM-Project/.venv/lib/python3.10/site-packages/moderngl/__init__.py", line 2299, in get_context
+    init_context()
+  File "/home/artrivas/GM-Project/.venv/lib/python3.10/site-packages/moderngl/__init__.py", line 2281, in init_context
+    loader = DefaultLoader()
+  File "/home/artrivas/GM-Project/.venv/lib/python3.10/site-packages/_moderngl.py", line 223, in __init__
+    lib = ctypes.CDLL("libGL.so")
+  File "/home/artrivas/.local/share/uv/python/cpython-3.10.18-linux-x86_64-gnu/lib/python3.10/ctypes/__init__.py", 
+line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libGL.so: cannot open shared object file: No such file or directory

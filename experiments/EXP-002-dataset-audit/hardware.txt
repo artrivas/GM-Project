@@ -1,0 +1,2 @@
+Linux DESKTOP-AFQJDSS 6.18.33.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Fri Jun  5 01:12:21 UTC 2026 x86_64 GNU/Linux
+sin GPU en este entorno; no requerida para Plan 2

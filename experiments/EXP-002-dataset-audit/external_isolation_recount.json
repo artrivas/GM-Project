@@ -1,0 +1,85 @@
+{
+  "eligible": {
+    "deaths": 5,
+    "episodes": 20,
+    "frames": 3685,
+    "truncated": 10,
+    "victories": 5
+  },
+  "excluded": [
+    {
+      "frames": 1000,
+      "path": "data/raw/gui_smoke_idle/episode_000.h5",
+      "reasons": [
+        "gui_smoke_idle_policy"
+      ]
+    },
+    {
+      "frames": 755,
+      "path": "data/raw/gui_smoke_idle/episode_001.h5",
+      "reasons": [
+        "gui_smoke_idle_policy"
+      ]
+    },
+    {
+      "frames": 20,
+      "path": "data/raw/smoke_random/episode_000.h5",
+      "reasons": [
+        "smoke_directory"
+      ]
+    }
+  ],
+  "input_pattern": {
+    "normalised": "data/raw/*/episode_*.h5",
+    "original": "data/raw/*/episode\\_*.h5"
+  },
+  "raw_all_files": {
+    "deaths": 6,
+    "episodes": 23,
+    "frames": 5460,
+    "victories": 5
+  },
+  "report_comparison": {
+    "claimed": {
+      "deaths": 5,
+      "episodes": 20,
+      "frames": 3685,
+      "seed_episode_counts": {
+        "0": 20
+      },
+      "victories": 5
+    },
+    "discrepancies": {},
+    "matches": true,
+    "measured": {
+      "deaths": 5,
+      "episodes": 20,
+      "frames": 3685,
+      "seed_episode_counts": {
+        "0": 20
+      },
+      "victories": 5
+    },
+    "report": "experiments/EXP-002-dataset-audit/quality_report.json"
+  },
+  "seed_episode_counts": {
+    "0": 20
+  },
+  "terminal_metadata_inconsistencies": [],
+  "truncation_check": {
+    "also_marked_truncated_true_and_event_3": 10,
+    "episode_ids": [
+      "pilot_random-random-s0-000",
+      "pilot_random-random-s0-001",
+      "pilot_random-random-s0-002",
+      "pilot_random-random-s0-003",
+      "pilot_random-random-s0-004",
+      "pilot_sticky-sticky-s0-000",
+      "pilot_sticky-sticky-s0-001",
+      "pilot_sticky-sticky-s0-002",
+      "pilot_sticky-sticky-s0-003",
+      "pilot_sticky-sticky-s0-004"
+    ],
+    "truncated_without_done": 10
+  }
+}

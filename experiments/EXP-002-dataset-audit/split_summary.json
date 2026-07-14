@@ -1,0 +1,100 @@
+{
+  "accepted_for_training": false,
+  "assignment_seed": 20260714,
+  "checks": {
+    "content_fingerprint_overlap": {
+      "train-test": [],
+      "train-val": [],
+      "val-test": []
+    },
+    "episode_conservation": true,
+    "episode_id_overlap": {
+      "train-test": [],
+      "train-val": [],
+      "val-test": []
+    },
+    "frame_conservation": true,
+    "input_episodes": 20,
+    "input_frames": 3685,
+    "no_content_fingerprint_overlap": true,
+    "no_episode_id_overlap": true,
+    "output_episodes": 20,
+    "output_frames": 3685
+  },
+  "limitations": [
+    "All eligible episodes use one level seed, so this is an episode split within one seed.",
+    "Exact duplicate trajectories are kept together and count once for rare-event gates.",
+    "A diagnostic manifest is written even on No-Go so the failure is reproducible."
+  ],
+  "rare_event_gate": {
+    "test": false,
+    "train": true,
+    "val": false
+  },
+  "schema_version": 1,
+  "splits": {
+    "test": {
+      "episodes": 2,
+      "frames": 600,
+      "level_seeds": [
+        0
+      ],
+      "physical_terminal_failures": 0,
+      "physical_truncated": 2,
+      "physical_victories": 0,
+      "source_policies": [
+        "sticky"
+      ],
+      "unique_content_trajectories": 2,
+      "unique_terminal_failures": 0,
+      "unique_truncated": 2,
+      "unique_victories": 0
+    },
+    "train": {
+      "episodes": 16,
+      "frames": 2485,
+      "level_seeds": [
+        0
+      ],
+      "physical_terminal_failures": 5,
+      "physical_truncated": 6,
+      "physical_victories": 5,
+      "source_policies": [
+        "random",
+        "scripted",
+        "sticky"
+      ],
+      "unique_content_trajectories": 8,
+      "unique_terminal_failures": 1,
+      "unique_truncated": 6,
+      "unique_victories": 1
+    },
+    "val": {
+      "episodes": 2,
+      "frames": 600,
+      "level_seeds": [
+        0
+      ],
+      "physical_terminal_failures": 0,
+      "physical_truncated": 2,
+      "physical_victories": 0,
+      "source_policies": [
+        "random",
+        "sticky"
+      ],
+      "unique_content_trajectories": 2,
+      "unique_terminal_failures": 0,
+      "unique_truncated": 2,
+      "unique_victories": 0
+    }
+  },
+  "status": "NO-GO_DIAGNOSTIC_SPLIT_ONLY",
+  "strategy_effective": "by_episode_within_seed_grouped_by_content_fingerprint",
+  "strategy_requested": "by_episode_within_seed",
+  "valid_human_episode_present": false,
+  "violations": [
+    "val_missing_unique_victory_or_terminal_failure",
+    "test_missing_unique_victory_or_terminal_failure",
+    "upstream_plan1_has_no_valid_human_episode"
+  ]
+}

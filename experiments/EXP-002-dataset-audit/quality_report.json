@@ -1,0 +1,229 @@
+{
+  "action_coverage": 15,
+  "action_histogram": {
+    "0": 177,
+    "1": 175,
+    "10": 269,
+    "11": 180,
+    "12": 146,
+    "13": 189,
+    "14": 163,
+    "2": 156,
+    "3": 232,
+    "4": 159,
+    "5": 217,
+    "6": 236,
+    "7": 729,
+    "8": 465,
+    "9": 192
+  },
+  "broken": [],
+  "by_distribution_mode": {
+    "easy": 5,
+    "hard": 15
+  },
+  "by_policy": {
+    "random": 5,
+    "scripted": 10,
+    "sticky": 5
+  },
+  "by_seed": {
+    "0": 20
+  },
+  "by_terminal_event": {
+    "terminal_failure": 5,
+    "truncated": 10,
+    "victory": 5
+  },
+  "duplicate_groups": [
+    {
+      "content_fingerprint": "4ac921f6e8634a68163c0135ffdd21525282f9faa460cb6d1338c3d4e54af99c",
+      "paths": [
+        "data/raw/pilot_scripted_hard/episode_000.h5",
+        "data/raw/pilot_scripted_hard/episode_001.h5",
+        "data/raw/pilot_scripted_hard/episode_002.h5",
+        "data/raw/pilot_scripted_hard/episode_003.h5",
+        "data/raw/pilot_scripted_hard/episode_004.h5"
+      ],
+      "size": 5,
+      "terminal_event": "victory"
+    },
+    {
+      "content_fingerprint": "89562166f98545178c7c15c745d2b845fdec53c94196ad92e6e9b11166a54d6b",
+      "paths": [
+        "data/raw/pilot_scripted_easy/episode_000.h5",
+        "data/raw/pilot_scripted_easy/episode_001.h5",
+        "data/raw/pilot_scripted_easy/episode_002.h5",
+        "data/raw/pilot_scripted_easy/episode_003.h5",
+        "data/raw/pilot_scripted_easy/episode_004.h5"
+      ],
+      "size": 5,
+      "terminal_event": "terminal_failure"
+    }
+  ],
+  "episode_lengths": {
+    "bins": {
+      "0-99": 10,
+      "100-199": 0,
+      "200-299": 0,
+      "300+": 10
+    },
+    "maximum": 300,
+    "mean": 184.25,
+    "median": 189.5,
+    "minimum": 58
+  },
+  "excluded": [
+    {
+      "path": "data/raw/gui_smoke_idle/episode_000.h5",
+      "reasons": [
+        "excluded_source_policy:gui_smoke_idle"
+      ],
+      "record": {
+        "action_histogram": {
+          "4": 1000
+        },
+        "collection_id": "plan1-human-pilot",
+        "content_fingerprint": "af278fd4ddae37eefadf31e1c1fa8963ba462a3a377746d910f53332d5facdf3",
+        "death_proxy": 1,
+        "distribution_mode": "hard",
+        "episode_id": "plan1-human-pilot-human-s0-000",
+        "file_sha256": "8e2302d907105c00bc73ac55afd920737c0c5fedd3f1d0f39e8579bfedc3b637",
+        "frames": 1000,
+        "human_confirmed": false,
+        "human_non_noop_actions": 0,
+        "level_seed": 0,
+        "path": "data/raw/gui_smoke_idle/episode_000.h5",
+        "source_policy": "gui_smoke_idle",
+        "terminal_event": "terminal_failure",
+        "truncated": 0,
+        "win": 0
+      }
+    },
+    {
+      "path": "data/raw/gui_smoke_idle/episode_001.h5",
+      "reasons": [
+        "excluded_source_policy:gui_smoke_idle"
+      ],
+      "record": {
+        "action_histogram": {
+          "4": 755
+        },
+        "collection_id": "plan1-human-pilot",
+        "content_fingerprint": "6ec277937015d6508778343068d7ff1054509f0ea1b4e3161e9ccd418f03b8e5",
+        "death_proxy": 0,
+        "distribution_mode": "hard",
+        "episode_id": "plan1-human-pilot-human-s0-001",
+        "file_sha256": "08c8a037fb89b681e316759ab0292de35da6fd042acb23b59b8e1642719f3058",
+        "frames": 755,
+        "human_confirmed": false,
+        "human_non_noop_actions": 0,
+        "level_seed": 0,
+        "path": "data/raw/gui_smoke_idle/episode_001.h5",
+        "source_policy": "gui_smoke_idle",
+        "terminal_event": "truncated",
+        "truncated": 1,
+        "win": 0
+      }
+    },
+    {
+      "path": "data/raw/smoke_random/episode_000.h5",
+      "reasons": [
+        "non_dataset_smoke_collection"
+      ],
+      "record": {
+        "action_histogram": {
+          "0": 2,
+          "11": 1,
+          "13": 1,
+          "14": 3,
+          "3": 5,
+          "4": 1,
+          "6": 1,
+          "7": 2,
+          "8": 3,
+          "9": 1
+        },
+        "collection_id": "smoke_random",
+        "content_fingerprint": "76bcac2a68316ea61b8f0fb611ebcd809375b20d2ff1f0f0c77dfb0820bbe39c",
+        "death_proxy": 0,
+        "distribution_mode": "hard",
+        "episode_id": "smoke_random-random-s0-000",
+        "file_sha256": "cefb2115b2b431ce33f366dc6cd18f63101912e5bd2c16064295b488affc6374",
+        "frames": 20,
+        "human_confirmed": false,
+        "human_non_noop_actions": 0,
+        "level_seed": 0,
+        "path": "data/raw/smoke_random/episode_000.h5",
+        "source_policy": "random",
+        "terminal_event": "truncated",
+        "truncated": 1,
+        "win": 0
+      }
+    }
+  ],
+  "generated_at_utc": "2026-07-14T04:59:42.048218+00:00",
+  "input_patterns": [
+    {
+      "normalized": "data/raw/*/episode_*.h5",
+      "original": "data/raw/*/episode\\_*.h5"
+    }
+  ],
+  "limitations": [
+    "Only one level seed is present; splits cannot measure cross-seed generalization.",
+    "Physical rare-event counts are inflated by exact duplicate scripted trajectories.",
+    "No valid human episode is present.",
+    "Death is a documented proxy for non-win terminal; death and fall are not separable."
+  ],
+  "quality_gates": {
+    "all_15_actions_present": true,
+    "at_least_3_unique_terminal_failures": false,
+    "at_least_3_unique_victories": false,
+    "human_episode_present": false,
+    "metadata_complete": true,
+    "structural_integrity": true,
+    "training_split_ready": false
+  },
+  "schema_version": 1,
+  "summary": {
+    "broken_episodes": 0,
+    "duplicate_groups": 2,
+    "eligible_episodes": 20,
+    "episodes_in_duplicate_groups": 10,
+    "excluded_episodes": 3,
+    "frames": 3685,
+    "human_episodes": 0,
+    "physical_terminal_failures": 5,
+    "physical_victories": 5,
+    "scanned_episode_files": 23,
+    "unique_content_trajectories": 12,
+    "unique_terminal_failures": 1,
+    "unique_victories": 1
+  },
+  "visual_sample": {
+    "episodes": [
+      {
+        "episode_id": "pilot_random-random-s0-002",
+        "frame_indices": [
+          25,
+          95,
+          146,
+          185
+        ],
+        "path": "data/raw/pilot_random/episode_002.h5"
+      },
+      {
+        "episode_id": "pilot_sticky-sticky-s0-004",
+        "frame_indices": [
+          18,
+          26,
+          77,
+          239
+        ],
+        "path": "data/raw/pilot_sticky/episode_004.h5"
+      }
+    ],
+    "file": "samples/random_episode_sample.png",
+    "selection_seed": 20260714
+  }
+}

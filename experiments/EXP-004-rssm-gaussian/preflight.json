@@ -1,0 +1,27 @@
+{
+  "phase": "EXP-004-rssm-gaussian",
+  "status": "NO_GO",
+  "gpu_requirement_for_full_training": "mandatory",
+  "training_started": false,
+  "rssm_checkpoint_created": false,
+  "blockers": [
+    {
+      "id": "autoencoder_audit_no_go",
+      "evidence": "experiments/EXP-003-autoencoder/independent_review.md",
+      "coin_color_recall": 0.0
+    },
+    {
+      "id": "active_dataset_not_dynamics_ready",
+      "evidence": "data/datasets/coinrun_teams_v1/summary.json",
+      "required_check": "action_frame_temporal_alignment"
+    },
+    {
+      "id": "local_gpu_unavailable",
+      "torch_version": "2.2.2+cpu",
+      "torch_cuda_available": false,
+      "nvidia_smi_available": false
+    }
+  ],
+  "model_files_created": false,
+  "free_bits_value_selected": false
+}
