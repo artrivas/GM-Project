@@ -1,0 +1,219 @@
+{
+  "dataset_schema_version": 1,
+  "session_id": "session_20260523_204237",
+  "start_time_iso": "2026-05-23T20:42:38.973730",
+  "env_name": "coinrun",
+  "observation_shape": [
+    64,
+    64,
+    3
+  ],
+  "action_space": {
+    "type": "Discrete",
+    "n": 15,
+    "combos": [
+      [
+        "LEFT",
+        "DOWN"
+      ],
+      [
+        "LEFT"
+      ],
+      [
+        "LEFT",
+        "UP"
+      ],
+      [
+        "DOWN"
+      ],
+      [],
+      [
+        "UP"
+      ],
+      [
+        "RIGHT",
+        "DOWN"
+      ],
+      [
+        "RIGHT"
+      ],
+      [
+        "RIGHT",
+        "UP"
+      ],
+      [
+        "D"
+      ],
+      [
+        "A"
+      ],
+      [
+        "W"
+      ],
+      [
+        "S"
+      ],
+      [
+        "Q"
+      ],
+      [
+        "E"
+      ]
+    ]
+  },
+  "env_kwargs": {
+    "env_name": "coinrun",
+    "distribution_mode": "easy",
+    "num_levels": 0,
+    "start_level": 0,
+    "center_agent": true,
+    "use_backgrounds": true,
+    "restrict_themes": false,
+    "use_monochrome_assets": false,
+    "paint_vel_info": false,
+    "use_generated_assets": false
+  },
+  "procgen_version": "0.10.7",
+  "python_version": "3.10.20",
+  "platform": "Linux-6.18.7-76061807-generic-x86_64-with-glibc2.39",
+  "end_time_iso": "2026-05-23T20:44:56.204566",
+  "episodes": [
+    {
+      "file": "episode_00001.npz",
+      "length": 96,
+      "total_reward": 0.0,
+      "completed": false,
+      "truncated": false,
+      "level_seed": 1799753085
+    },
+    {
+      "file": "episode_00002.npz",
+      "length": 97,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 5614023
+    },
+    {
+      "file": "episode_00003.npz",
+      "length": 130,
+      "total_reward": 0.0,
+      "completed": false,
+      "truncated": false,
+      "level_seed": 863703641
+    },
+    {
+      "file": "episode_00004.npz",
+      "length": 209,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 916455184
+    },
+    {
+      "file": "episode_00005.npz",
+      "length": 146,
+      "total_reward": 0.0,
+      "completed": false,
+      "truncated": false,
+      "level_seed": 1566848594
+    },
+    {
+      "file": "episode_00006.npz",
+      "length": 53,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 1638147905
+    },
+    {
+      "file": "episode_00007.npz",
+      "length": 91,
+      "total_reward": 0.0,
+      "completed": false,
+      "truncated": false,
+      "level_seed": 920532601
+    },
+    {
+      "file": "episode_00008.npz",
+      "length": 71,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 672271818
+    },
+    {
+      "file": "episode_00009.npz",
+      "length": 25,
+      "total_reward": 0.0,
+      "completed": false,
+      "truncated": false,
+      "level_seed": 141379096
+    },
+    {
+      "file": "episode_00010.npz",
+      "length": 51,
+      "total_reward": 0.0,
+      "completed": false,
+      "truncated": false,
+      "level_seed": 757516198
+    },
+    {
+      "file": "episode_00011.npz",
+      "length": 204,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 531007762
+    },
+    {
+      "file": "episode_00012.npz",
+      "length": 27,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 729784379
+    },
+    {
+      "file": "episode_00013.npz",
+      "length": 42,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 54032370
+    },
+    {
+      "file": "episode_00014.npz",
+      "length": 46,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 1069124968
+    },
+    {
+      "file": "episode_00015.npz",
+      "length": 52,
+      "total_reward": 10.0,
+      "completed": true,
+      "truncated": false,
+      "level_seed": 887780362
+    },
+    {
+      "file": "episode_00016.npz",
+      "length": 37,
+      "total_reward": 0.0,
+      "completed": false,
+      "truncated": true,
+      "level_seed": 376310359
+    }
+  ],
+  "summary": {
+    "episodes": 16,
+    "total_steps": 1377,
+    "wins": 9,
+    "win_rate": 0.5625,
+    "avg_episode_length": 86.0625,
+    "avg_episode_reward": 5.625,
+    "elapsed_seconds": 137.23086166381836
+  }
+}

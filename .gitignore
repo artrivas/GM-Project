@@ -3,14 +3,6 @@ __pycache__/
 .pytest_cache/
 *.py[cod]
 
-# Los datos y checkpoints locales no se versionan; se conserva el esqueleto.
-data/*
-!data/.gitkeep
-!data/splits/
-!data/splits/**
-!data/datasets/
-!data/datasets/**
-checkpoints/
 
 # Artefactos locales de editores y sistema operativo.
 .vscode/

@@ -1,0 +1,19 @@
+{
+  "active_flow_unchanged_shape": true,
+  "active_raw_hdf5_files": 23,
+  "active_split_manifest_lines": {
+    "test": 2,
+    "train": 16,
+    "val": 2
+  },
+  "active_split_manifest_sha256": {
+    "test": "ba223ad2bad3314dd16499e2cb3c9c6efbff5021875ca7b87bb73e35f8d0bd47",
+    "train": "66d217c97bbc6db697fd7870b57a9414a0f9c83d0ce842c21f666b095e898903",
+    "val": "bf565fbe630a3c43dcb1e195df8a68c22fdbf190173f39d09d8278e72169d382"
+  },
+  "coinrun_root_removed": true,
+  "incoming_files_matching_active_raw_glob": 0,
+  "incoming_npz_files": 1899,
+  "incoming_root_exists": true,
+  "plan3_checkpoint_sha256": "598a1fb086db5f881454029b7de2f48bb8106159720b77ff6274591c815131bc"
+}

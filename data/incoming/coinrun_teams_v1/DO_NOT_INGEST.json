@@ -1,0 +1,22 @@
+{
+  "active_training_data": true,
+  "status": "promoted_by_manifest_for_visual_training_only",
+  "allowed_consumers": [
+    "src.data_prep.inventory_external_coinrun",
+    "src.data_prep.promote_external_coinrun",
+    "src.data.frame_dataset"
+  ],
+  "forbidden_destinations_without_explicit_migration": [
+    "data/raw",
+    "data/splits"
+  ],
+  "blocking_reasons_for_action_conditioned_training": [
+    "source_policy is absent",
+    "action/frame temporal alignment has not been independently audited"
+  ],
+  "notes": [
+    "Original NPZ files remain immutable in this incoming directory.",
+    "Active versioned manifests live under data/datasets/coinrun_teams_v1.",
+    "Five session-declared files are missing and were excluded from the audited manifest."
+  ]
+}
