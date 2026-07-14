@@ -1,0 +1,3 @@
+sin GPU NVIDIA/CUDA en este entorno
+nvidia-smi no está instalado ni disponible en Windows o WSL
+torch==2.2.2+cpu; torch.cuda.is_available() == False; device_count == 0

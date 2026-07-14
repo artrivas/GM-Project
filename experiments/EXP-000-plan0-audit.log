@@ -1,0 +1,14 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.18, pytest-8.3.5, pluggy-1.6.0 -- /home/artrivas/GM-Project/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/artrivas/GM-Project
+collecting ... collected 6 items
+
+tests/test_environment.py::test_python_version_is_supported_by_procgen_wheels PASSED [ 16%]
+tests/test_environment.py::test_required_imports PASSED                  [ 33%]
+tests/test_environment.py::test_project_config_round_trip PASSED         [ 50%]
+tests/test_environment.py::test_project_config_safety_guards PASSED      [ 66%]
+tests/test_environment.py::test_fixed_seed_initial_frame_is_deterministic PASSED [ 83%]
+tests/test_environment.py::test_procgen_coinrun_single_permitted_transition PASSED [100%]
+
+============================== 6 passed in 2.44s ===============================

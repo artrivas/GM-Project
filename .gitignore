@@ -1,1 +1,14 @@
 __pycache__/
+.venv/
+.pytest_cache/
+*.py[cod]
+
+# Los datos y checkpoints locales no se versionan; se conserva el esqueleto.
+data/*
+!data/.gitkeep
+checkpoints/
+
+# Artefactos locales de editores y sistema operativo.
+.vscode/
+.idea/
+.DS_Store

@@ -1,0 +1,39 @@
+PLAN 0 HARDWARE REPORT
+Captured: 2026-07-13 (America/Lima)
+
+HOST
+OS: Microsoft Windows 11 Home 10.0.26200, 64-bit
+CPU: AMD Ryzen 7 PRO 7840U with Radeon 780M Graphics
+CPU topology: 8 physical cores, 16 logical processors
+Host RAM visible to Windows: 14.67 GiB
+Integrated graphics: AMD Radeon 780M
+Reported graphics adapter memory: 1 GiB (Win32_VideoController; shared-memory iGPU)
+Graphics driver: 32.0.22024.4008
+
+WSL EXECUTION ENVIRONMENT
+Distribution: Ubuntu 26.04 LTS
+Kernel: 6.18.33.1-microsoft-standard-WSL2
+Architecture: x86_64, 64-bit
+RAM assigned to WSL at audit: 7.1 GiB total, 6.4 GiB available
+Swap: 2.0 GiB
+Workspace filesystem at audit: 1007 GiB total, 929 GiB available
+
+PYTHON AND ML RUNTIME
+System Python: 3.14.4 (unsupported by the published Procgen 0.10.7 wheels)
+Project virtual environment: CPython 3.10.18, 64-bit
+Virtual environment path: .venv (repository-relative)
+PyTorch: 2.2.2+cpu
+PyTorch CUDA build: None
+torch.cuda.is_available(): False
+CUDA devices visible to PyTorch: 0
+
+GPU CLASSIFICATION
+No NVIDIA GPU, CUDA runtime, or nvidia-smi executable was visible in Windows or WSL.
+The AMD Radeon 780M is integrated graphics and is not used by this CPU PyTorch environment.
+GPU is not required for Plan 0 or Procgen. A remote GPU should be arranged before Plan 3+.
+
+AUDIT NOTES
+No dataset, trajectory, gameplay video, checkpoint, or model file was present in the repository.
+No Docker, Podman, Conda, Micromamba, uv, Windows Python, or alternate system Python was initially installed.
+Python 3.10.18 was installed in an isolated user-managed runtime and used only for .venv;
+the WSL system Python 3.14.4 was not replaced.

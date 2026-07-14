@@ -1,0 +1,46 @@
+project:
+  name: coinrun-interactive-world-model
+  global_seed: 0
+  observation_shape: [64, 64, 3]
+  action_count: 15
+
+paths:
+  data: data
+  experiments: experiments
+  checkpoints: checkpoints
+
+procgen:
+  version: 0.10.7
+  env_name: coinrun
+  start_level: 0
+  num_levels: 1
+  distribution_mode: hard
+  use_sequential_levels: false
+  num_threads: 0
+
+seed_progression:
+  stage_1_fixed: [0]
+  stage_2_three: [0, 1, 2]
+  stage_3_five: [0, 1, 2, 3, 4]
+  unseen_evaluation_enabled: false
+
+data_policy:
+  required_human_minutes: 40
+  split_unit: episode
+  split_by_seed: true
+  sources: [human, random, sticky, scripted, trained]
+
+runtime_policy:
+  allow_procgen_transition_during_data_collection: true
+  allow_procgen_transition_during_smoke_test: true
+  allow_procgen_transition_during_world_model_rollout: false
+
+targets:
+  minimum_fps: 10
+  maximum_latency_ms: 100
+  minimum_seed_scope: 1
+  procedural_generalization_required: false
+
+pending_validation:
+  evaluate_easy_distribution_mode: true
+  remote_gpu_required_from_plan: 3
