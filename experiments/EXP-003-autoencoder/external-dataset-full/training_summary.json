@@ -1,0 +1,13 @@
+{
+  "amp_used": true,
+  "best_val_loss": 0.043875023451135566,
+  "checkpoint": "experiments/EXP-003-autoencoder/external-dataset-full/checkpoints/best.pt",
+  "device": "cuda",
+  "diagnostic_split_acknowledged": false,
+  "elapsed_seconds": 405.7965203719999,
+  "epochs_completed": 12,
+  "global_steps": 40260,
+  "gpu_used": true,
+  "train_frames": 107353,
+  "val_frames": 30679
+}
