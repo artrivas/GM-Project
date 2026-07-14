@@ -73,7 +73,14 @@ def evaluate_loss(
     criterion: ReconstructionLoss,
     device: torch.device,
 ) -> dict[str, float]:
-    totals = {"loss": 0.0, "l1": 0.0, "ssim": 0.0}
+    totals = {
+        "loss": 0.0,
+        "l1": 0.0,
+        "ssim": 0.0,
+        "coin_roi_l1": 0.0,
+        "coin_pixel_l1": 0.0,
+        "coin_mask_bce": 0.0,
+    }
     count = 0
     model.eval()
     with torch.no_grad():
@@ -143,6 +150,14 @@ def train(args: argparse.Namespace) -> dict[str, Any]:
         ssim_weight=float(config["loss"]["ssim_weight"]),
         window_size=int(config["loss"]["ssim_window_size"]),
         coin_roi_weight=float(config["loss"].get("coin_roi_weight", 1.0)),
+        coin_roi_loss_weight=float(config["loss"].get("coin_roi_loss_weight", 0.0)),
+        coin_pixel_loss_weight=float(config["loss"].get("coin_pixel_loss_weight", 0.0)),
+        coin_mask_loss_weight=float(config["loss"].get("coin_mask_loss_weight", 0.0)),
+        coin_mask_negative_weight=float(config["loss"].get("coin_mask_negative_weight", 1.0)),
+        coin_hard_negative_fraction=float(
+            config["loss"].get("coin_hard_negative_fraction", 0.0)
+        ),
+        coin_roi_size=int(config["loss"].get("coin_roi_size", 7)),
     )
     optimizer = torch.optim.AdamW(
         model.parameters(),
@@ -178,7 +193,14 @@ def train(args: argparse.Namespace) -> dict[str, Any]:
     stop = False
     for epoch in range(start_epoch, int(training["epochs"])):
         model.train()
-        totals = {"loss": 0.0, "l1": 0.0, "ssim": 0.0}
+        totals = {
+            "loss": 0.0,
+            "l1": 0.0,
+            "ssim": 0.0,
+            "coin_roi_l1": 0.0,
+            "coin_pixel_l1": 0.0,
+            "coin_mask_bce": 0.0,
+        }
         seen = 0
         for batch in train_loader:
             images = batch["image"].to(device)

@@ -243,6 +243,9 @@ def review(
     coin_roi_mae: list[float] = []
     coin_pixel_mae: list[float] = []
     coin_recall: list[float] = []
+    target_yellow_pixels = 0
+    predicted_yellow_pixels = 0
+    true_positive_yellow_pixels = 0
     coin_heap: list[tuple[int, int, dict[str, Any]]] = []
     context_heap: list[tuple[int, int, dict[str, Any]]] = []
     minimum_pixels = int(config["evaluation"]["coin_min_pixels"])
@@ -264,6 +267,9 @@ def review(
             )
             masks = yellow_object_mask(target, config)
             reconstruction_masks = yellow_object_mask(reconstruction, config)
+            target_yellow_pixels += int(masks.sum())
+            predicted_yellow_pixels += int(reconstruction_masks.sum())
+            true_positive_yellow_pixels += int((masks & reconstruction_masks).sum())
             for index in range(size):
                 candidate = {
                     "episode_id": str(batch["episode_id"][index]),
@@ -309,6 +315,16 @@ def review(
         "mean_coin_roi_mae": float(np.mean(coin_roi_mae)) if coin_roi_mae else None,
         "mean_coin_pixel_mae": float(np.mean(coin_pixel_mae)) if coin_pixel_mae else None,
         "mean_coin_color_recall": float(np.mean(coin_recall)) if coin_recall else None,
+        "yellow_pixel_recall": (
+            true_positive_yellow_pixels / target_yellow_pixels if target_yellow_pixels else None
+        ),
+        "yellow_pixel_precision": (
+            true_positive_yellow_pixels / predicted_yellow_pixels
+            if predicted_yellow_pixels
+            else 0.0
+        ),
+        "target_yellow_pixels": target_yellow_pixels,
+        "predicted_yellow_pixels": predicted_yellow_pixels,
     }
     metrics_path, reported = _reported_metrics(checkpoint_path)
     comparison: dict[str, Any] = {"metrics_path": metrics_path.as_posix(), "available": reported is not None}
@@ -319,6 +335,9 @@ def review(
             "mean_coin_roi_mae": reported["coin"]["mean_model_roi_mae"],
             "mean_coin_color_recall": reported["coin"]["mean_coin_color_recall"],
         }
+        if "yellow_pixel_precision" in reported["coin"]:
+            pairs["yellow_pixel_precision"] = reported["coin"]["yellow_pixel_precision"]
+            pairs["yellow_pixel_recall"] = reported["coin"]["yellow_pixel_recall"]
         comparison["differences"] = {
             key: (None if independent[key] is None or value is None else independent[key] - value)
             for key, value in pairs.items()
@@ -383,6 +402,9 @@ def review(
             "systematic_coin_color_loss": (
                 independent["mean_coin_color_recall"] is not None
                 and independent["mean_coin_color_recall"] < 0.5
+            ),
+            "diffuse_yellow_false_positives": (
+                independent["yellow_pixel_precision"] < 0.5
             ),
         },
     }

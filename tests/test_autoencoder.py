@@ -13,7 +13,7 @@ import torch
 from src.data.frame_dataset import CoinRunFrameDataset
 from src.evaluation.reconstruction_metrics import coin_mask
 from src.models.autoencoder import ConvAutoencoder
-from src.models.losses import ReconstructionLoss, ssim_per_image
+from src.models.losses import ReconstructionLoss, soft_yellow_score, ssim_per_image
 from src.training.train_autoencoder import checkpoint_payload, seed_everything
 
 
@@ -26,6 +26,27 @@ def test_shape_latent_and_output_range():
     assert reconstruction.shape == image.shape
     assert torch.isfinite(reconstruction).all()
     assert 0.0 <= float(reconstruction.min()) <= float(reconstruction.max()) <= 1.0
+
+
+def test_detail_v2_retains_eight_by_eight_features_without_skip_connections():
+    model = ConvAutoencoder(
+        latent_dim=128,
+        base_channels=8,
+        architecture="detail_v2",
+    )
+    image = torch.rand(2, 3, 64, 64)
+    encoded_features = model.encoder_conv(image)
+    latent = model.encode(image)
+    reconstruction = model.decode(latent)
+    assert encoded_features.shape == (2, 32, 8, 8)
+    assert latent.shape == (2, 128)
+    assert reconstruction.shape == image.shape
+    assert model.feature_size == 8
+
+
+def test_unknown_autoencoder_architecture_is_rejected():
+    with pytest.raises(ValueError, match="unknown autoencoder architecture"):
+        ConvAutoencoder(architecture="not-real")
 
 
 def test_loss_is_zero_for_identical_images_and_ssim_is_one():
@@ -90,6 +111,93 @@ def test_coin_weighting_penalizes_a_missing_coin_more_than_plain_l1():
         l1_weight=1.0, ssim_weight=0.0, coin_roi_weight=10.0
     )(prediction, target)["l1"]
     assert weighted > plain
+
+
+def test_normalized_coin_terms_do_not_disappear_into_global_average():
+    target = torch.zeros(2, 3, 64, 64)
+    target[0, 0, 20:22, 30:32] = 1.0
+    target[0, 1, 20:22, 30:32] = 0.8
+    prediction = torch.zeros_like(target)
+    criterion = ReconstructionLoss(
+        l1_weight=0.8,
+        ssim_weight=0.2,
+        coin_roi_loss_weight=0.25,
+        coin_pixel_loss_weight=0.50,
+        coin_roi_size=7,
+    )
+    values = criterion(prediction, target)
+    assert values["coin_pixel_l1"] > values["l1"] * 100
+    assert values["coin_roi_l1"] > values["l1"] * 2
+    assert values["loss"] > ReconstructionLoss()(prediction, target)["loss"]
+
+
+def test_coin_terms_are_zero_for_batches_without_yellow_objects():
+    image = torch.zeros(2, 3, 64, 64)
+    values = ReconstructionLoss(
+        coin_roi_loss_weight=0.25,
+        coin_pixel_loss_weight=0.50,
+    )(image, image)
+    assert float(values["coin_roi_l1"]) == 0.0
+    assert float(values["coin_pixel_l1"]) == 0.0
+
+
+def test_soft_yellow_mask_rewards_true_coin_and_penalizes_false_yellow():
+    target = torch.zeros(1, 3, 64, 64)
+    target[:, 0, 20:22, 30:32] = 1.0
+    target[:, 1, 20:22, 30:32] = 0.8
+    clean_prediction = target.clone()
+    false_yellow_prediction = target.clone()
+    false_yellow_prediction[:, 0, 40:55, 5:20] = 1.0
+    false_yellow_prediction[:, 1, 40:55, 5:20] = 0.8
+    assert float(soft_yellow_score(target)[0, 0, 20, 30]) > 0.75
+    criterion = ReconstructionLoss(
+        l1_weight=0.0,
+        ssim_weight=0.0,
+        coin_mask_loss_weight=1.0,
+        coin_mask_negative_weight=5.0,
+        coin_hard_negative_fraction=0.01,
+    )
+    clean_loss = criterion(clean_prediction, target)["coin_mask_bce"]
+    false_yellow_loss = criterion(false_yellow_prediction, target)["coin_mask_bce"]
+    assert false_yellow_loss > clean_loss
+
+
+def test_detail_v2_can_overfit_and_retain_tiny_yellow_objects():
+    seed_everything(17)
+    model = ConvAutoencoder(latent_dim=32, base_channels=4, architecture="detail_v2")
+    optimizer = torch.optim.Adam(model.parameters(), lr=0.003)
+    criterion = ReconstructionLoss(
+        l1_weight=0.8,
+        ssim_weight=0.2,
+        coin_roi_loss_weight=0.25,
+        coin_pixel_loss_weight=0.50,
+        coin_mask_loss_weight=0.25,
+        coin_mask_negative_weight=5.0,
+        coin_hard_negative_fraction=0.01,
+        coin_roi_size=7,
+    )
+    images = torch.zeros(4, 3, 64, 64)
+    positions = ((10, 10), (18, 42), (40, 20), (50, 50))
+    for index, (y, x) in enumerate(positions):
+        images[index] += 0.03 * index
+        images[index, 0, y : y + 2, x : x + 2] = 1.0
+        images[index, 1, y : y + 2, x : x + 2] = 0.8
+        images[index, 2, y : y + 2, x : x + 2] = 0.0
+    for _ in range(160):
+        optimizer.zero_grad(set_to_none=True)
+        loss = criterion(model(images), images)["loss"]
+        loss.backward()
+        optimizer.step()
+    with torch.no_grad():
+        reconstruction = model(images)
+    original_coin = coin_mask(images, {"evaluation": {
+        "coin_red_min": 220, "coin_green_min": 170, "coin_blue_max": 40
+    }})
+    reconstructed_coin = coin_mask(reconstruction, {"evaluation": {
+        "coin_red_min": 220, "coin_green_min": 170, "coin_blue_max": 40
+    }})
+    recall = float((original_coin & reconstructed_coin).sum() / original_coin.sum())
+    assert recall >= 0.75
 
 
 def test_checkpoint_round_trip_preserves_output(tmp_path: Path):

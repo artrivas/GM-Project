@@ -1,0 +1,13 @@
+{
+  "amp_used": false,
+  "best_val_loss": 0.45987878545829797,
+  "checkpoint": "experiments/EXP-003-autoencoder/detail-v2-hardnegative-cpu-smoke/checkpoints/best.pt",
+  "device": "cpu",
+  "diagnostic_split_acknowledged": false,
+  "elapsed_seconds": 32.33538372399926,
+  "epochs_completed": 9,
+  "global_steps": 100,
+  "gpu_used": false,
+  "train_frames": 179,
+  "val_frames": 361
+}

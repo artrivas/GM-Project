@@ -1,0 +1,41 @@
+schema_version: 2
+
+model:
+  architecture: detail_v2
+  latent_dim: 128
+  base_channels: 32
+
+loss:
+  l1_weight: 0.8
+  ssim_weight: 0.2
+  ssim_window_size: 7
+  # Legacy spatial weighting remains disabled. The two normalized terms below cannot
+  # disappear into the global image average when the coin occupies only 2-6 pixels.
+  coin_roi_weight: 1.0
+  coin_roi_loss_weight: 0.25
+  coin_pixel_loss_weight: 0.50
+  coin_mask_loss_weight: 0.25
+  coin_mask_negative_weight: 1.0
+  # Hard-negative mining prevents a high recall obtained by painting diffuse yellow areas.
+  coin_hard_negative_fraction: 0.01
+  coin_roi_size: 7
+
+training:
+  seed: 20260714
+  epochs: 20
+  batch_size: 16
+  learning_rate: 0.0003
+  weight_decay: 0.00001
+  early_stopping_patience: 8
+  num_workers: 2
+  amp: true
+  gradient_clip_norm: 1.0
+  checkpoint_every_epochs: 1
+  allow_diagnostic_split: false
+
+evaluation:
+  coin_red_min: 220
+  coin_green_min: 170
+  coin_blue_max: 40
+  coin_min_pixels: 2
+  coin_roi_padding: 2

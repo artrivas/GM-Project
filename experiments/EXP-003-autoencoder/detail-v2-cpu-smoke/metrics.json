@@ -1,0 +1,727 @@
+{
+  "acceptance": {
+    "coin_color_recall_at_least_90_percent": false,
+    "coin_evidence_has_at_least_10_frames": true,
+    "coin_roi_mae_improves_by_25_percent": false,
+    "psnr_beats_baseline_by_3db": false,
+    "ssim_beats_baseline_by_0_10": false
+  },
+  "checkpoint": "experiments/EXP-003-autoencoder/detail-v2-cpu-smoke/checkpoints/best.pt",
+  "coin": {
+    "frames": 43,
+    "mean_baseline_coin_pixel_mae": 0.3515880087087321,
+    "mean_baseline_roi_mae": 0.3888932958591816,
+    "mean_coin_color_recall": 0.44069767448791236,
+    "mean_model_coin_pixel_mae": 0.16277950534293817,
+    "mean_model_roi_mae": 0.39770272789999495,
+    "roi_mae_improvement_fraction": -0.022652568544157203,
+    "rows": [
+      {
+        "baseline_coin_pixel_mae": 0.37762686610221863,
+        "baseline_roi_mae": 0.37879669666290283,
+        "bbox_xyxy": [
+          61,
+          23,
+          64,
+          30
+        ],
+        "coin_color_recall": 1.0,
+        "coin_pixels": 3,
+        "episode_id": "team5__session_20260523_163850__episode_00039",
+        "frame_index": 10,
+        "model_coin_pixel_mae": 0.04619135707616806,
+        "model_roi_mae": 0.4655587673187256
+      },
+      {
+        "baseline_coin_pixel_mae": 0.3135964870452881,
+        "baseline_roi_mae": 0.44944852590560913,
+        "bbox_xyxy": [
+          59,
+          29,
+          64,
+          35
+        ],
+        "coin_color_recall": 1.0,
+        "coin_pixels": 6,
+        "episode_id": "team5__session_20260523_163850__episode_00039",
+        "frame_index": 11,
+        "model_coin_pixel_mae": 0.0627792477607727,
+        "model_roi_mae": 0.41443371772766113
+      },
+      {
+        "baseline_coin_pixel_mae": 0.2994004487991333,
+        "baseline_roi_mae": 0.42372360825538635,
+        "bbox_xyxy": [
+          58,
+          33,
+          64,
+          40
+        ],
+        "coin_color_recall": 1.0,
+        "coin_pixels": 5,
+        "episode_id": "team5__session_20260523_163850__episode_00039",
+        "frame_index": 12,
+        "model_coin_pixel_mae": 0.04168366640806198,
+        "model_roi_mae": 0.4236223101615906
+      },
+      {
+        "baseline_coin_pixel_mae": 0.3124985992908478,
+        "baseline_roi_mae": 0.4085763990879059,
+        "bbox_xyxy": [
+          56,
+          37,
+          63,
+          43
+        ],
+        "coin_color_recall": 1.0,
+        "coin_pixels": 5,
+        "episode_id": "team5__session_20260523_163850__episode_00039",
+        "frame_index": 13,
+        "model_coin_pixel_mae": 0.027269667014479637,
+        "model_roi_mae": 0.4278036653995514
+      },
+      {
+        "baseline_coin_pixel_mae": 0.2960127294063568,
+        "baseline_roi_mae": 0.5613676905632019,
+        "bbox_xyxy": [
+          55,
+          39,
+          61,
+          45
+        ],
+        "coin_color_recall": 1.0,
+        "coin_pixels": 4,
+        "episode_id": "team5__session_20260523_163850__episode_00039",
+        "frame_index": 14,
+        "model_coin_pixel_mae": 0.039128415286540985,
+        "model_roi_mae": 0.5455893278121948
+      },
+      {
+        "baseline_coin_pixel_mae": 0.2935188114643097,
+        "baseline_roi_mae": 0.39669451117515564,
+        "bbox_xyxy": [
+          54,
+          41,
+          60,
+          47
+        ],
+        "coin_color_recall": 1.0,
+        "coin_pixels": 4,
+        "episode_id": "team5__session_20260523_163850__episode_00039",
+        "frame_index": 15,
+        "model_coin_pixel_mae": 0.0384385846555233,
+        "model_roi_mae": 0.44762322306632996
+      },
+      {
+        "baseline_coin_pixel_mae": 0.32724466919898987,
+        "baseline_roi_mae": 0.4768468737602234,
+        "bbox_xyxy": [
+          52,
+          41,
+          59,
+          47
+        ],
+        "coin_color_recall": 1.0,
+        "coin_pixels": 4,
+        "episode_id": "team5__session_20260523_163850__episode_00039",
+        "frame_index": 16,
+        "model_coin_pixel_mae": 0.01332442369312048,
+        "model_roi_mae": 0.5057610869407654
+      },
+      {
+        "baseline_coin_pixel_mae": 0.33389419317245483,
+        "baseline_roi_mae": 0.4039158225059509,
+        "bbox_xyxy": [
+          51,
+          41,
+          58,
+          47
+        ],
+        "coin_color_recall": 1.0,
+        "coin_pixels": 5,
+        "episode_id": "team5__session_20260523_163850__episode_00039",
+        "frame_index": 17,
+        "model_coin_pixel_mae": 0.013412761501967907,
+        "model_roi_mae": 0.4421085715293884
+      },
+      {
+        "baseline_coin_pixel_mae": 0.3350319564342499,
+        "baseline_roi_mae": 0.41140761971473694,
+        "bbox_xyxy": [
+          50,
+          39,
+          57,
+          46
+        ],
+        "coin_color_recall": 1.0,
+        "coin_pixels": 5,
+        "episode_id": "team5__session_20260523_163850__episode_00039",
+        "frame_index": 18,
+        "model_coin_pixel_mae": 0.025272311642766,
+        "model_roi_mae": 0.4417628049850464
+      },
+      {
+        "baseline_coin_pixel_mae": 0.3159090280532837,
+        "baseline_roi_mae": 0.3758208453655243,
+        "bbox_xyxy": [
+          50,
+          37,
+          56,
+          43
+        ],
+        "coin_color_recall": 0.75,
+        "coin_pixels": 4,
+        "episode_id": "team5__session_20260523_163850__episode_00039",
+        "frame_index": 19,
+        "model_coin_pixel_mae": 0.07029779255390167,
+        "model_roi_mae": 0.3749185800552368
+      },
+      {
+        "baseline_coin_pixel_mae": 0.31999561190605164,
+        "baseline_roi_mae": 0.39132678508758545,
+        "bbox_xyxy": [
+          49,
+          33,
+          55,
+          40
+        ],
+        "coin_color_recall": 0.0,
+        "coin_pixels": 5,
+        "episode_id": "team5__session_20260523_163850__episode_00039",
+        "frame_index": 20,
+        "model_coin_pixel_mae": 0.18927955627441406,
+        "model_roi_mae": 0.3774991035461426
+      },
+      {
+        "baseline_coin_pixel_mae": 0.39711904525756836,
+        "baseline_roi_mae": 0.402111291885376,
+        "bbox_xyxy": [
+          61,
+          10,
+          64,
+          16
+        ],
+        "coin_color_recall": 0.0,
+        "coin_pixels": 2,
+        "episode_id": "team5__session_20260523_165007__episode_00073",
+        "frame_index": 4,
+        "model_coin_pixel_mae": 0.2489277571439743,
+        "model_roi_mae": 0.443705290555954
+      },
+      {
+        "baseline_coin_pixel_mae": 0.41262349486351013,
+        "baseline_roi_mae": 0.40161705017089844,
+        "bbox_xyxy": [
+          59,
+          17,
+          64,
+          23
+        ],
+        "coin_color_recall": 1.0,
+        "coin_pixels": 5,
+        "episode_id": "team5__session_20260523_165007__episode_00073",
+        "frame_index": 5,
+        "model_coin_pixel_mae": 0.05276042968034744,
+        "model_roi_mae": 0.4198882281780243
+      },
+      {
+        "baseline_coin_pixel_mae": 0.3866664171218872,
+        "baseline_roi_mae": 0.3935120701789856,
+        "bbox_xyxy": [
+          58,
+          23,
+          64,
+          30
+        ],
+        "coin_color_recall": 1.0,
+        "coin_pixels": 6,
+        "episode_id": "team5__session_20260523_165007__episode_00073",
+        "frame_index": 6,
+        "model_coin_pixel_mae": 0.030332377180457115,
+        "model_roi_mae": 0.43002817034721375
+      },
+      {
+        "baseline_coin_pixel_mae": 0.31724420189857483,
+        "baseline_roi_mae": 0.45504555106163025,
+        "bbox_xyxy": [
+          56,
+          29,
+          63,
+          35
+        ],
+        "coin_color_recall": 1.0,
+        "coin_pixels": 6,
+        "episode_id": "team5__session_20260523_165007__episode_00073",
+        "frame_index": 7,
+        "model_coin_pixel_mae": 0.039822086691856384,
+        "model_roi_mae": 0.4295501708984375
+      },
+      {
+        "baseline_coin_pixel_mae": 0.3051462769508362,
+        "baseline_roi_mae": 0.46972566843032837,
+        "bbox_xyxy": [
+          55,
+          33,
+          61,
+          40
+        ],
+        "coin_color_recall": 1.0,
+        "coin_pixels": 5,
+        "episode_id": "team5__session_20260523_165007__episode_00073",
+        "frame_index": 8,
+        "model_coin_pixel_mae": 0.040104690939188004,
+        "model_roi_mae": 0.4467898905277252
+      },
+      {
+        "baseline_coin_pixel_mae": 0.3061043918132782,
+        "baseline_roi_mae": 0.451812207698822,
+        "bbox_xyxy": [
+          53,
+          37,
+          60,
+          43
+        ],
+        "coin_color_recall": 1.0,
+        "coin_pixels": 5,
+        "episode_id": "team5__session_20260523_165007__episode_00073",
+        "frame_index": 9,
+        "model_coin_pixel_mae": 0.03455531597137451,
+        "model_roi_mae": 0.44700244069099426
+      },
+      {
+        "baseline_coin_pixel_mae": 0.31129804253578186,
+        "baseline_roi_mae": 0.5290510654449463,
+        "bbox_xyxy": [
+          51,
+          39,
+          58,
+          45
+        ],
+        "coin_color_recall": 1.0,
+        "coin_pixels": 5,
+        "episode_id": "team5__session_20260523_165007__episode_00073",
+        "frame_index": 10,
+        "model_coin_pixel_mae": 0.029078125953674316,
+        "model_roi_mae": 0.46983492374420166
+      },
+      {
+        "baseline_coin_pixel_mae": 0.30561214685440063,
+        "baseline_roi_mae": 0.4293498694896698,
+        "bbox_xyxy": [
+          50,
+          41,
+          56,
+          47
+        ],
+        "coin_color_recall": 1.0,
+        "coin_pixels": 4,
+        "episode_id": "team5__session_20260523_165007__episode_00073",
+        "frame_index": 11,
+        "model_coin_pixel_mae": 0.031854528933763504,
+        "model_roi_mae": 0.4505216181278229
+      },
+      {
+        "baseline_coin_pixel_mae": 0.3393891155719757,
+        "baseline_roi_mae": 0.5116075277328491,
+        "bbox_xyxy": [
+          48,
+          41,
+          55,
+          47
+        ],
+        "coin_color_recall": 1.0,
+        "coin_pixels": 4,
+        "episode_id": "team5__session_20260523_165007__episode_00073",
+        "frame_index": 12,
+        "model_coin_pixel_mae": 0.031043246388435364,
+        "model_roi_mae": 0.4695461094379425
+      },
+      {
+        "baseline_coin_pixel_mae": 0.3244897127151489,
+        "baseline_roi_mae": 0.4154706597328186,
+        "bbox_xyxy": [
+          47,
+          41,
+          53,
+          47
+        ],
+        "coin_color_recall": 1.0,
+        "coin_pixels": 3,
+        "episode_id": "team5__session_20260523_165007__episode_00073",
+        "frame_index": 13,
+        "model_coin_pixel_mae": 0.02904098853468895,
+        "model_roi_mae": 0.43485188484191895
+      },
+      {
+        "baseline_coin_pixel_mae": 0.32145175337791443,
+        "baseline_roi_mae": 0.4983365833759308,
+        "bbox_xyxy": [
+          45,
+          39,
+          51,
+          45
+        ],
+        "coin_color_recall": 0.0,
+        "coin_pixels": 4,
+        "episode_id": "team5__session_20260523_165007__episode_00073",
+        "frame_index": 14,
+        "model_coin_pixel_mae": 0.07370849698781967,
+        "model_roi_mae": 0.46241307258605957
+      },
+      {
+        "baseline_coin_pixel_mae": 0.340567409992218,
+        "baseline_roi_mae": 0.4108092784881592,
+        "bbox_xyxy": [
+          43,
+          37,
+          50,
+          43
+        ],
+        "coin_color_recall": 0.0,
+        "coin_pixels": 5,
+        "episode_id": "team5__session_20260523_165007__episode_00073",
+        "frame_index": 15,
+        "model_coin_pixel_mae": 0.11901377141475677,
+        "model_roi_mae": 0.4289941191673279
+      },
+      {
+        "baseline_coin_pixel_mae": 0.36299851536750793,
+        "baseline_roi_mae": 0.375558465719223,
+        "bbox_xyxy": [
+          41,
+          33,
+          48,
+          40
+        ],
+        "coin_color_recall": 0.20000000298023224,
+        "coin_pixels": 5,
+        "episode_id": "team5__session_20260523_165007__episode_00073",
+        "frame_index": 16,
+        "model_coin_pixel_mae": 0.1490343064069748,
+        "model_roi_mae": 0.4385102391242981
+      },
+      {
+        "baseline_coin_pixel_mae": 0.4593055546283722,
+        "baseline_roi_mae": 0.32090839743614197,
+        "bbox_xyxy": [
+          40,
+          29,
+          46,
+          36
+        ],
+        "coin_color_recall": 0.0,
+        "coin_pixels": 6,
+        "episode_id": "team5__session_20260523_165007__episode_00073",
+        "frame_index": 17,
+        "model_coin_pixel_mae": 0.23561981320381165,
+        "model_roi_mae": 0.3950347602367401
+      },
+      {
+        "baseline_coin_pixel_mae": 0.4715692698955536,
+        "baseline_roi_mae": 0.31483203172683716,
+        "bbox_xyxy": [
+          38,
+          29,
+          44,
+          36
+        ],
+        "coin_color_recall": 0.0,
+        "coin_pixels": 6,
+        "episode_id": "team5__session_20260523_165007__episode_00073",
+        "frame_index": 18,
+        "model_coin_pixel_mae": 0.2727455496788025,
+        "model_roi_mae": 0.361749529838562
+      },
+      {
+        "baseline_coin_pixel_mae": 0.4736509919166565,
+        "baseline_roi_mae": 0.29553231596946716,
+        "bbox_xyxy": [
+          36,
+          29,
+          42,
+          36
+        ],
+        "coin_color_recall": 0.0,
+        "coin_pixels": 5,
+        "episode_id": "team5__session_20260523_165007__episode_00073",
+        "frame_index": 19,
+        "model_coin_pixel_mae": 0.28336653113365173,
+        "model_roi_mae": 0.3746160566806793
+      },
+      {
+        "baseline_coin_pixel_mae": 0.47893527150154114,
+        "baseline_roi_mae": 0.28716471791267395,
+        "bbox_xyxy": [
+          34,
+          29,
+          40,
+          36
+        ],
+        "coin_color_recall": 0.0,
+        "coin_pixels": 5,
+        "episode_id": "team5__session_20260523_165007__episode_00073",
+        "frame_index": 20,
+        "model_coin_pixel_mae": 0.23133401572704315,
+        "model_roi_mae": 0.35404935479164124
+      },
+      {
+        "baseline_coin_pixel_mae": 0.39711904525756836,
+        "baseline_roi_mae": 0.42592185735702515,
+        "bbox_xyxy": [
+          61,
+          10,
+          64,
+          16
+        ],
+        "coin_color_recall": 0.0,
+        "coin_pixels": 2,
+        "episode_id": "team5__session_20260524_204035__episode_00034",
+        "frame_index": 8,
+        "model_coin_pixel_mae": 0.3011144697666168,
+        "model_roi_mae": 0.3128165900707245
+      },
+      {
+        "baseline_coin_pixel_mae": 0.43560370802879333,
+        "baseline_roi_mae": 0.435163676738739,
+        "bbox_xyxy": [
+          59,
+          10,
+          64,
+          16
+        ],
+        "coin_color_recall": 0.0,
+        "coin_pixels": 5,
+        "episode_id": "team5__session_20260524_204035__episode_00034",
+        "frame_index": 9,
+        "model_coin_pixel_mae": 0.3171364963054657,
+        "model_roi_mae": 0.3200743496417999
+      },
+      {
+        "baseline_coin_pixel_mae": 0.41864630579948425,
+        "baseline_roi_mae": 0.3860595226287842,
+        "bbox_xyxy": [
+          58,
+          10,
+          64,
+          16
+        ],
+        "coin_color_recall": 0.0,
+        "coin_pixels": 3,
+        "episode_id": "team5__session_20260524_204035__episode_00034",
+        "frame_index": 10,
+        "model_coin_pixel_mae": 0.28866803646087646,
+        "model_roi_mae": 0.2716372311115265
+      },
+      {
+        "baseline_coin_pixel_mae": 0.41158032417297363,
+        "baseline_roi_mae": 0.4030661880970001,
+        "bbox_xyxy": [
+          56,
+          10,
+          62,
+          16
+        ],
+        "coin_color_recall": 0.0,
+        "coin_pixels": 4,
+        "episode_id": "team5__session_20260524_204035__episode_00034",
+        "frame_index": 11,
+        "model_coin_pixel_mae": 0.28227606415748596,
+        "model_roi_mae": 0.29180657863616943
+      },
+      {
+        "baseline_coin_pixel_mae": 0.33882254362106323,
+        "baseline_roi_mae": 0.4003683626651764,
+        "bbox_xyxy": [
+          54,
+          17,
+          60,
+          23
+        ],
+        "coin_color_recall": 0.0,
+        "coin_pixels": 3,
+        "episode_id": "team5__session_20260524_204035__episode_00034",
+        "frame_index": 12,
+        "model_coin_pixel_mae": 0.2600141763687134,
+        "model_roi_mae": 0.32496777176856995
+      },
+      {
+        "baseline_coin_pixel_mae": 0.3218887448310852,
+        "baseline_roi_mae": 0.347362756729126,
+        "bbox_xyxy": [
+          52,
+          23,
+          58,
+          30
+        ],
+        "coin_color_recall": 0.0,
+        "coin_pixels": 6,
+        "episode_id": "team5__session_20260524_204035__episode_00034",
+        "frame_index": 13,
+        "model_coin_pixel_mae": 0.3800426125526428,
+        "model_roi_mae": 0.37638580799102783
+      },
+      {
+        "baseline_coin_pixel_mae": 0.30202898383140564,
+        "baseline_roi_mae": 0.2768797278404236,
+        "bbox_xyxy": [
+          50,
+          29,
+          56,
+          35
+        ],
+        "coin_color_recall": 0.0,
+        "coin_pixels": 3,
+        "episode_id": "team5__session_20260524_204035__episode_00034",
+        "frame_index": 14,
+        "model_coin_pixel_mae": 0.3746744394302368,
+        "model_roi_mae": 0.4323262870311737
+      },
+      {
+        "baseline_coin_pixel_mae": 0.32216596603393555,
+        "baseline_roi_mae": 0.2730129063129425,
+        "bbox_xyxy": [
+          48,
+          33,
+          54,
+          40
+        ],
+        "coin_color_recall": 0.0,
+        "coin_pixels": 5,
+        "episode_id": "team5__session_20260524_204035__episode_00034",
+        "frame_index": 15,
+        "model_coin_pixel_mae": 0.3434836268424988,
+        "model_roi_mae": 0.41462013125419617
+      },
+      {
+        "baseline_coin_pixel_mae": 0.3163124620914459,
+        "baseline_roi_mae": 0.2750920057296753,
+        "bbox_xyxy": [
+          46,
+          37,
+          52,
+          43
+        ],
+        "coin_color_recall": 0.0,
+        "coin_pixels": 4,
+        "episode_id": "team5__session_20260524_204035__episode_00034",
+        "frame_index": 16,
+        "model_coin_pixel_mae": 0.3056969940662384,
+        "model_roi_mae": 0.40631139278411865
+      },
+      {
+        "baseline_coin_pixel_mae": 0.3222368359565735,
+        "baseline_roi_mae": 0.280630499124527,
+        "bbox_xyxy": [
+          44,
+          39,
+          50,
+          45
+        ],
+        "coin_color_recall": 0.0,
+        "coin_pixels": 4,
+        "episode_id": "team5__session_20260524_204035__episode_00034",
+        "frame_index": 17,
+        "model_coin_pixel_mae": 0.30054324865341187,
+        "model_roi_mae": 0.3723794221878052
+      },
+      {
+        "baseline_coin_pixel_mae": 0.3256435692310333,
+        "baseline_roi_mae": 0.2920268177986145,
+        "bbox_xyxy": [
+          42,
+          41,
+          48,
+          47
+        ],
+        "coin_color_recall": 0.0,
+        "coin_pixels": 4,
+        "episode_id": "team5__session_20260524_204035__episode_00034",
+        "frame_index": 18,
+        "model_coin_pixel_mae": 0.257954478263855,
+        "model_roi_mae": 0.3164014518260956
+      },
+      {
+        "baseline_coin_pixel_mae": 0.328126460313797,
+        "baseline_roi_mae": 0.3021469712257385,
+        "bbox_xyxy": [
+          40,
+          41,
+          46,
+          47
+        ],
+        "coin_color_recall": 0.0,
+        "coin_pixels": 4,
+        "episode_id": "team5__session_20260524_204035__episode_00034",
+        "frame_index": 19,
+        "model_coin_pixel_mae": 0.25818780064582825,
+        "model_roi_mae": 0.28605133295059204
+      },
+      {
+        "baseline_coin_pixel_mae": 0.3339339792728424,
+        "baseline_roi_mae": 0.3124716281890869,
+        "bbox_xyxy": [
+          38,
+          41,
+          44,
+          47
+        ],
+        "coin_color_recall": 0.0,
+        "coin_pixels": 4,
+        "episode_id": "team5__session_20260524_204035__episode_00034",
+        "frame_index": 20,
+        "model_coin_pixel_mae": 0.26317593455314636,
+        "model_roi_mae": 0.27374622225761414
+      },
+      {
+        "baseline_coin_pixel_mae": 0.3444133996963501,
+        "baseline_roi_mae": 0.3276538550853729,
+        "bbox_xyxy": [
+          36,
+          39,
+          42,
+          45
+        ],
+        "coin_color_recall": 0.0,
+        "coin_pixels": 4,
+        "episode_id": "team5__session_20260524_204035__episode_00034",
+        "frame_index": 21,
+        "model_coin_pixel_mae": 0.27834874391555786,
+        "model_roi_mae": 0.28489944338798523
+      },
+      {
+        "baseline_coin_pixel_mae": 0.36086103320121765,
+        "baseline_roi_mae": 0.3441848158836365,
+        "bbox_xyxy": [
+          34,
+          37,
+          40,
+          43
+        ],
+        "coin_color_recall": 0.0,
+        "coin_pixels": 4,
+        "episode_id": "team5__session_20260524_204035__episode_00034",
+        "frame_index": 22,
+        "model_coin_pixel_mae": 0.2887817919254303,
+        "model_roi_mae": 0.29302626848220825
+      }
+    ]
+  },
+  "device": "cpu",
+  "eval_manifest": "data/datasets/coinrun_teams_v1/smoke/val/manifest.jsonl",
+  "evaluation_seed_count": 8,
+  "frames": 361,
+  "global": {
+    "baseline_mae": 0.21685130114040216,
+    "baseline_mse": 0.06412695814698026,
+    "baseline_psnr_db": 11.92959360290353,
+    "baseline_ssim": 0.502996010133104,
+    "model_mae": 0.21492999148170705,
+    "model_mse": 0.07809155221791149,
+    "model_psnr_db": 11.073959446576696,
+    "model_ssim": 0.4088104477879744
+  },
+  "go": false,
+  "limitations": [
+    "Coin regions are detected heuristically from yellow pixels in the ground-truth frame."
+  ]
+}

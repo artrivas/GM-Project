@@ -1,0 +1,5 @@
+GPU: no disponible
+PyTorch: 2.2.2+cpu
+torch.cuda.is_available(): False
+Dispositivo usado: CPU
+AMP usado: false

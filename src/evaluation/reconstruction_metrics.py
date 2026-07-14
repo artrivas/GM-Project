@@ -114,6 +114,9 @@ def evaluate(
     count = 0
     coin_rows: list[dict[str, Any]] = []
     montage_candidates: list[dict[str, Any]] = []
+    target_yellow_pixels = 0
+    predicted_yellow_pixels = 0
+    true_positive_yellow_pixels = 0
     with torch.no_grad():
         for batch in loader:
             target = batch["image"].to(device)
@@ -130,6 +133,9 @@ def evaluate(
             totals["baseline_ssim"] += float(ssim_per_image(baseline, target).sum())
             masks = coin_mask(target, config)
             reconstructed_masks = coin_mask(reconstruction, config)
+            target_yellow_pixels += int(masks.sum())
+            predicted_yellow_pixels += int(reconstructed_masks.sum())
+            true_positive_yellow_pixels += int((masks & reconstructed_masks).sum())
             minimum = int(config["evaluation"]["coin_min_pixels"])
             padding = int(config["evaluation"]["coin_roi_padding"])
             for index in range(size):
@@ -193,6 +199,22 @@ def evaluate(
         if model_roi is not None and baseline_roi and baseline_roi > 0
         else None
     )
+    coin_summary["target_yellow_pixels"] = target_yellow_pixels
+    coin_summary["predicted_yellow_pixels"] = predicted_yellow_pixels
+    coin_summary["true_positive_yellow_pixels"] = true_positive_yellow_pixels
+    coin_summary["yellow_pixel_recall"] = (
+        true_positive_yellow_pixels / target_yellow_pixels if target_yellow_pixels else None
+    )
+    coin_summary["yellow_pixel_precision"] = (
+        true_positive_yellow_pixels / predicted_yellow_pixels if predicted_yellow_pixels else 0.0
+    )
+    precision = coin_summary["yellow_pixel_precision"]
+    recall = coin_summary["yellow_pixel_recall"]
+    coin_summary["yellow_pixel_f1"] = (
+        2.0 * precision * recall / (precision + recall)
+        if recall is not None and precision + recall > 0
+        else 0.0
+    )
     acceptance = {
         "psnr_beats_baseline_by_3db": averages["model_psnr_db"] >= averages["baseline_psnr_db"] + 3.0,
         "ssim_beats_baseline_by_0_10": averages["model_ssim"] >= averages["baseline_ssim"] + 0.10,
@@ -204,6 +226,7 @@ def evaluate(
             coin_summary.get("mean_coin_color_recall") is not None
             and coin_summary["mean_coin_color_recall"] >= 0.90
         ),
+        "coin_color_precision_at_least_90_percent": precision >= 0.90,
         "coin_evidence_has_at_least_10_frames": len(coin_rows) >= 10,
     }
     unique_seeds = sorted({int(episode["level_seed"]) for episode in dataset.episodes})
